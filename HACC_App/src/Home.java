@@ -1,4 +1,4 @@
-import java.awt.GridLayout;   
+import java.awt.FlowLayout;   
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -16,7 +16,7 @@ public class Home extends JFrame {
         frame.setLocation(150, 100);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setVisible(true);
-        frame.setLayout(new GridLayout(2,1));
+        frame.setLayout(new FlowLayout());
 
         loginConfig();
         exitConfig();
