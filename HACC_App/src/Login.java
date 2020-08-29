@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -42,7 +44,11 @@ public class Login {
     }
 
     void welcomeMsg() {
-        JOptionPane.showMessageDialog(loginPanel, "You have successfully logged in", "Login Confirmation", 1);
+        JOptionPane.showMessageDialog(loginPanel, "You have successfully logged in", "Login Confirmation", JOptionPane.INFORMATION_MESSAGE);
+    }
+    void notAllowedMsg(){
+        JOptionPane.showMessageDialog(loginPanel,"Incorrect login or password",
+        "Error",JOptionPane.ERROR_MESSAGE);
     }
 
     void submitHover() {
@@ -50,8 +56,7 @@ public class Login {
 
             @Override
             public void mouseClicked(MouseEvent e) {
-                // TODO Auto-generated method stub
-
+                authenticator();
             }
 
             @Override
@@ -76,6 +81,31 @@ public class Login {
                 submit.setBackground(Color.WHITE);
             }
 
+        });
+    }
+
+    void authenticator() {
+        String username, password;
+        username = label1.getText();
+        password = label2.getText();
+
+        if (username == "Abir" && password =="Abir") {
+            welcomeMsg();
+        }
+        else
+        {
+            notAllowedMsg();
+        }
+    }
+
+    void submitAction() {
+        submit.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                authenticator();
+            }
+            
         });
     }
 }
