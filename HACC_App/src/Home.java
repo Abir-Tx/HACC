@@ -13,6 +13,7 @@ public class Home extends JFrame {
     JFrame frame = new JFrame();
     JButton login = new JButton();
     JButton exit = new JButton();
+    JPanel panel = new JPanel();
     // FlowLayout fl = new FlowLayout(300, 10, 500);
     public Home() {
         frame.setTitle("Home Automation Control Center");
@@ -155,9 +156,13 @@ public class Home extends JFrame {
             public void actionPerformed(ActionEvent e){
                 // JOptionPane.showMessageDialog(frame, "You are successfully logged in");
                 // frame.dispose();
-                frame.getContentPane().removeAll();
-                frame.revalidate();
-                frame.repaint();
+                frame.getContentPane().removeAll(); //Removes everything from the current window/frame
+                // frame.revalidate();
+                frame.repaint(); //Updates the Frame windows live
+                frame.add(panel);
+                panel.setVisible(true);
+                
+                frame.validate();
             }
         });
     }
