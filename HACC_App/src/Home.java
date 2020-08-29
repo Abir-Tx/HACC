@@ -131,8 +131,19 @@ public class Home extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);         //Both of these code works
+                // System.exit(0);         //Both of these code works
                 // frame.dispose();
+                int userAnswer;
+                userAnswer = JOptionPane.showConfirmDialog(frame, "Are you sure ?");
+                if (userAnswer == JOptionPane.YES_OPTION){
+                    System.exit(0);
+                }
+                else if(userAnswer == JOptionPane.NO_OPTION){
+                    JOptionPane.showMessageDialog(frame, "You opted for using this program more");
+                }
+                else{
+                    //Do nothing :-) 
+                }
             }
             
         });
