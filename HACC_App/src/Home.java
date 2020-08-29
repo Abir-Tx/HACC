@@ -7,12 +7,12 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class Home extends JFrame {
     JFrame frame = new JFrame();
     JButton login = new JButton();
     JButton exit = new JButton();
-
     // FlowLayout fl = new FlowLayout(300, 10, 500);
     public Home() {
         frame.setTitle("Home Automation Control Center");
@@ -136,7 +136,7 @@ public class Home extends JFrame {
                 int userAnswer;
                 userAnswer = JOptionPane.showConfirmDialog(frame, "Are you sure ?");
                 if (userAnswer == JOptionPane.YES_OPTION){
-                    System.exit(0);
+                    System.exit(0);   //Exits the program
                 }
                 else if(userAnswer == JOptionPane.NO_OPTION){
                     JOptionPane.showMessageDialog(frame, "You opted for using this program more");
@@ -155,6 +155,7 @@ public class Home extends JFrame {
             public void actionPerformed(ActionEvent e){
                 // JOptionPane.showMessageDialog(frame, "You are successfully logged in");
                 // frame.dispose();
+                frame.getContentPane().removeAll();
             }
         });
     }
