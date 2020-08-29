@@ -1,5 +1,7 @@
 import java.awt.*;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
@@ -19,15 +21,23 @@ public class Home extends JFrame {
         frame.setLocation(150, 100);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setLayout(new FlowLayout(300, 10, 300));
-        
         frame.setVisible(true);
-        
 
+        //  Adding the components
+        adder();
+
+        // Hover Effect Adder
         loginConfig();
         loginHover();
+
+        // Applying the effects/configs
         exitConfig();
         exitHover();
-        adder();
+        
+
+        //Button Functionality
+        exitAction(); //Exit button functionality
+
     }
 
     void loginConfig() {
@@ -37,6 +47,7 @@ public class Home extends JFrame {
         login.setFocusPainted(true);
         login.setFocusable(true);
         login.setToolTipText("Press to go to the login windows");
+
     }
 
     void exitConfig() {
@@ -77,7 +88,7 @@ public class Home extends JFrame {
             public void mouseReleased(MouseEvent arg0) {
 
             }
-            
+
         });
     }
 
@@ -109,10 +120,21 @@ public class Home extends JFrame {
             public void mouseReleased(MouseEvent arg0) {
 
             }
-            
+
         });
     }
 
+    void exitAction() {     //The exit button actions defined here
+        exit.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);         //Both of these code works
+                // frame.dispose();
+            }
+            
+        });
+    }
     void adder(){
         frame.add(login);
         frame.add(exit);
