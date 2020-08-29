@@ -7,13 +7,12 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 public class Home extends JFrame {
-    JFrame frame = new JFrame();
+    protected static JFrame frame = new JFrame();
     JButton login = new JButton();
     JButton exit = new JButton();
-    JPanel panel = new JPanel();
+    
     // FlowLayout fl = new FlowLayout(300, 10, 500);
     public Home() {
         frame.setTitle("Home Automation Control Center");
@@ -154,15 +153,15 @@ public class Home extends JFrame {
         login.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                // JOptionPane.showMessageDialog(frame, "You are successfully logged in");
-                // frame.dispose();
-                frame.getContentPane().removeAll(); //Removes everything from the current window/frame
+                frame.getContentPane().removeAll();      //Removes everything from the current window/frame
                 // frame.revalidate();
-                frame.repaint(); //Updates the Frame windows live
-                frame.add(panel);
-                panel.setVisible(true);
-                
-                frame.validate();
+                frame.repaint();                            //Updates the Frame windows live
+
+                //Second Panel 
+                new Login();
+
+                //Re adding the new contents to the main frame
+                frame.validate(); 
             }
         });
     }
