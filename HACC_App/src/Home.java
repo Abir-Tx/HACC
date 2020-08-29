@@ -6,6 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class Home extends JFrame {
     JFrame frame = new JFrame();
@@ -37,6 +38,7 @@ public class Home extends JFrame {
 
         //Button Functionality
         exitAction(); //Exit button functionality
+        loginAction(); //Login button functionality
 
     }
 
@@ -133,6 +135,16 @@ public class Home extends JFrame {
                 // frame.dispose();
             }
             
+        });
+    }
+
+    void loginAction(){
+        login.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                // JOptionPane.showMessageDialog(frame, "You are successfully logged in");
+                // frame.dispose();
+            }
         });
     }
     void adder(){
