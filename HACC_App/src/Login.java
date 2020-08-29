@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -19,27 +21,61 @@ public class Login {
         loginPanel.setLayout(new FlowLayout());
         loginPanel.setVisible(true);
 
-        //Username:
+        // Username:
         label1 = new JLabel("Username");
-        field1= new JTextField(15);
+        field1 = new JTextField(15);
 
-        //Password:
+        // Password:
         label2 = new JLabel("Password");
         field2 = new JPasswordField(15);
 
-        //Submit button:
+        // Submit button:
         submit.setText("Submit");
 
-
-        //Adding components: 
+        // Adding components:
         loginPanel.add(label1);
         loginPanel.add(field1);
         loginPanel.add(label2);
         loginPanel.add(field2);
         loginPanel.add(submit);
+        submitHover();
     }
 
-    void welcomeMsg(){
+    void welcomeMsg() {
         JOptionPane.showMessageDialog(loginPanel, "You have successfully logged in", "Login Confirmation", 1);
+    }
+
+    void submitHover() {
+        submit.addMouseListener(new MouseListener() {
+
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                submit.setBackground(Color.GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                submit.setBackground(Color.WHITE);
+            }
+
+        });
     }
 }
