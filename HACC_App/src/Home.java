@@ -1,13 +1,9 @@
 import java.awt.*;
 import java.awt.FlowLayout;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.UIManager;
 
 public class Home extends JFrame {
     JFrame frame = new JFrame();
@@ -22,12 +18,15 @@ public class Home extends JFrame {
         frame.setEnabled(true);
         frame.setLocation(150, 100);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        frame.setVisible(true);
         frame.setLayout(new FlowLayout(300, 10, 300));
+        
+        frame.setVisible(true);
+        
 
         loginConfig();
         loginHover();
         exitConfig();
+        exitHover();
         adder();
     }
 
@@ -67,6 +66,38 @@ public class Home extends JFrame {
             @Override
             public void mouseExited(MouseEvent arg0) {
                 login.setBackground(Color.WHITE);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent arg0) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent arg0) {
+
+            }
+            
+        });
+    }
+
+    void exitHover() {
+        exit.addMouseListener(new MouseListener() {
+
+            @Override
+            public void mouseClicked(MouseEvent arg0) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent arg0) {
+                exit.setBackground(Color.BLUE);
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent arg0) {
+                exit.setBackground(Color.WHITE);
             }
 
             @Override
