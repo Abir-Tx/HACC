@@ -156,6 +156,8 @@ public class Home extends JFrame {
                 // JOptionPane.showMessageDialog(frame, "You are successfully logged in");
                 // frame.dispose();
                 frame.getContentPane().removeAll();
+                frame.revalidate();
+                frame.repaint();
             }
         });
     }
