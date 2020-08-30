@@ -6,6 +6,10 @@ public class ContCent {
     JFrame frame = new JFrame();
     JPanel contPanelWindow = new JPanel(new FlowLayout());
     JButton light = new JButton();
+    JButton fan = new JButton();
+    JButton tv = new JButton();
+    JButton speaker = new JButton();
+
 
     ContCent(){
         frame.setVisible(true);
@@ -22,8 +26,16 @@ public class ContCent {
         // light.setContentAreaFilled(false);
         // light.setBorder(BorderFactory.createTitledBorder("Test"));
 
+        fan.setText("Fan");
+        tv.setText("Smart TV");
+        speaker.setText("Smart Speaker");
+
+
         //Adding components
         contPanelWindow.add(light);
+        contPanelWindow.add(fan);
+        contPanelWindow.add(tv);
+        contPanelWindow.add(speaker);
     }
 
     public static void main(String[] args) {

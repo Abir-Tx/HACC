@@ -5,6 +5,13 @@
             "name": "CodeLens (Launch) - ContCent",
             "request": "launch",
             "mainClass": "ContCent",
+            "projectName": "HACC_21fddddc"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ContCent",
+            "request": "launch",
+            "mainClass": "ContCent",
             "projectName": "HACC_79292d67"
         },
         {
