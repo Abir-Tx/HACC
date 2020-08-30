@@ -105,6 +105,10 @@ public class Login {
             @Override
             public void actionPerformed(ActionEvent e) {
                 authenticator();
+                Home.frame.getContentPane().removeAll();
+                Home.frame.repaint();
+                new ContCent();
+                Home.frame.validate(); 
             }
             
         });
