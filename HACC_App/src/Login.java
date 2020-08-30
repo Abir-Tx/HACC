@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.JToolTip;
 
 public class Login {
     JPanel loginPanel = new JPanel();
@@ -114,6 +115,18 @@ public class Login {
                 }
                 else if (!username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i))) {
                     JOptionPane.showMessageDialog(Home.frame, "Wrong Username ! Please recheck your Username");
+                }
+                else if (!username.equals(registeredUsernames.get(i)) && !password.equals(registeredPasswords.get(i))) {
+                    // JTextField authenticationResult = new JTextField();
+                    // Home.frame.add(authenticationResult);
+                    // authenticationResult.setText("Try Again");
+                    // authenticationResult.setEditable(false);
+                    JToolTip toolTip=new JToolTip();
+                    toolTip.setToolTipText("Try again");
+                    Home.frame.add(toolTip);
+                    toolTip.setVisible(true);
+                    toolTip.setSize(300, 150);
+
                 }
             }
             // else{
