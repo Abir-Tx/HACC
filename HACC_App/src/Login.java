@@ -41,13 +41,14 @@ public class Login {
         loginPanel.add(field2);
         loginPanel.add(submit);
         submitHover();
+        submitAction();
     }
 
     void welcomeMsg() {
         JOptionPane.showMessageDialog(loginPanel, "You have successfully logged in", "Login Confirmation", JOptionPane.INFORMATION_MESSAGE);
     }
     void notAllowedMsg(){
-        JOptionPane.showMessageDialog(loginPanel,"Incorrect login or password",
+        JOptionPane.showMessageDialog(loginPanel,"Incorrect login or password. Try again",
         "Error",JOptionPane.ERROR_MESSAGE);
     }
 
@@ -85,7 +86,7 @@ public class Login {
     }
 
     void authenticator() {
-        String username, password;
+        final String username, password;
         username = field1.getText().toString();
         password = field2.getText().toString();
 
