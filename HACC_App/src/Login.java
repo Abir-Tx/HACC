@@ -86,10 +86,10 @@ public class Login {
 
     void authenticator() {
         String username, password;
-        username = label1.getText();
-        password = label2.getText();
+        username = field1.getText().toString();
+        password = field2.getText().toString();
 
-        if (username == "Abir" && password =="Abir") {
+        if (username.equals("Abir") && password.equals("0123")) {
             welcomeMsg();
         }
         else
