@@ -42,7 +42,7 @@ public class Login {
         loginPanel.add(field2);
         loginPanel.add(submit);
         submitHover();
-        submitAction();
+        // submitAction();
     }
 
     void welcomeMsg() {
@@ -93,31 +93,48 @@ public class Login {
 
         final ArrayList<String> registeredUsernames= new ArrayList<String>();
         registeredUsernames.add("Abir");
+        registeredUsernames.add("Nazmul");
         final ArrayList<String> registeredPasswords = new ArrayList<String>();
         registeredPasswords.add("1234");
+        registeredPasswords.add("12345");
 
 
-        if (username.equals(registeredUsernames.get(0)) && password.equals(registeredPasswords.get(0))) {
-            welcomeMsg();
-        }
-        else
-        {
-            notAllowedMsg();
-        }
-    }
-
-    void submitAction() {
-        submit.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                authenticator();
+        for (int i =0 ; i<registeredUsernames.toArray().length; i++){
+            if (username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i))) {
+                welcomeMsg();
                 Home.frame.getContentPane().removeAll();
                 Home.frame.repaint();
-                new ContCent();
-                Home.frame.validate(); 
+                // new ContCent();
+                Home.frame.validate();
             }
-            
-        });
+            else if (!username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i))) {
+                notAllowedMsg();
+            }
+            // {
+            //     // notAllowedMsg();
+            // }
+        }
+        // if (username.equals(registeredUsernames.get(0)) && password.equals(registeredPasswords.get(0))) {
+        //     welcomeMsg();
+        // }
+        // else
+        // {
+        //     notAllowedMsg();
+        // }
     }
+
+    // void submitAction() {
+    //     submit.addActionListener(new ActionListener() {
+
+    //         @Override
+    //         public void actionPerformed(ActionEvent e) {
+    //             authenticator();
+    //             Home.frame.getContentPane().removeAll();
+    //             Home.frame.repaint();
+    //             new ContCent();
+    //             Home.frame.validate(); 
+    //         }
+            
+    //     });
+    // }
 }
