@@ -3,6 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -90,7 +91,13 @@ public class Login {
         username = field1.getText().toString();
         password = field2.getText().toString();
 
-        if (username.equals("Abir") && password.equals("0123")) {
+        final ArrayList<String> registeredUsernames= new ArrayList<String>();
+        registeredUsernames.add("Abir");
+        final ArrayList<String> registeredPasswords = new ArrayList<String>();
+        registeredPasswords.add("1234");
+
+
+        if (username.equals(registeredUsernames.get(0)) && password.equals(registeredPasswords.get(0))) {
             welcomeMsg();
         }
         else
