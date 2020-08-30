@@ -106,12 +106,18 @@ public class Login {
                 Home.frame.repaint();
                 // new ContCent();
                 Home.frame.validate();
+                break;
             }
-            else if (!username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i))) {
-                notAllowedMsg();
+            else if (!(username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i)))) {
+                if (username.equals(registeredUsernames.get(i)) && !password.equals(registeredPasswords.get(i))) {
+                    JOptionPane.showMessageDialog(Home.frame, "Wrong Password ! Please recheck your Password");
+                }
+                else if (!username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i))) {
+                    JOptionPane.showMessageDialog(Home.frame, "Wrong Username ! Please recheck your Username");
+                }
             }
-            // {
-            //     // notAllowedMsg();
+            // else{
+            //     JOptionPane.showConfirmDialog(Home.frame, "Fatal Error ! Something went wrong", "Unknown Error", JOptionPane.ERROR_MESSAGE);
             // }
         }
         // if (username.equals(registeredUsernames.get(0)) && password.equals(registeredPasswords.get(0))) {
