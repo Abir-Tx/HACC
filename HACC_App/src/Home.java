@@ -43,7 +43,7 @@ public class Home extends JFrame {
     }
 
     void loginConfig() {
-        login.setBounds(940,250,150,40);    //Sets the position of the button on the frame
+        login.setBounds(940,220,150,40);    //Sets the position of the button on the frame
         login.setText("Login");
         login.setContentAreaFilled(true);
         login.setEnabled(true);
@@ -54,6 +54,7 @@ public class Home extends JFrame {
     }
 
     void exitConfig() {
+        exit.setBounds(940,270,150,40);    //Sets the position of the button on the frame
         exit.setText("Exit");
         exit.setContentAreaFilled(true);
         exit.setEnabled(true);
