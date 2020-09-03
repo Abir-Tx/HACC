@@ -21,6 +21,7 @@ public class Home extends JFrame {
         frame.setLocation(150, 50);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setLayout(null);
+        frame.setResizable(false);
         frame.setVisible(true);
 
         //  Adding the components
