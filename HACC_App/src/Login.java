@@ -41,6 +41,11 @@ public class Login {
 
         // Submit button:
         submit.setText("Submit");
+        submit.setBounds(10, 350, 150, 45);
+
+        //Header
+        label3 = new JLabel("HACC Login");
+        label3.setBounds(50,5,100,30);
 
         // Adding components:
         loginPanel.add(label1);
