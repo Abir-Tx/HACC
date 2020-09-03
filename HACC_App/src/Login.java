@@ -1,6 +1,4 @@
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -16,11 +14,11 @@ import javax.swing.JToolTip;
 public class Login {
     JPanel loginPanel = new JPanel();
     JButton submit = new JButton();
-    JLabel label1, label2;
+    JLabel label1, label2, label3;
     JTextField field1, field2;
 
     Login() {
-        Home.frame.add(loginPanel);
+        Home.frame.add(loginPanel);  //Adding the panel to the frame
 
         loginPanel.setLayout(null);
         loginPanel.setSize(1100, 600);
@@ -45,7 +43,8 @@ public class Login {
 
         //Header
         label3 = new JLabel("HACC Login");
-        label3.setBounds(50,5,100,30);
+        label3.setBounds(50,5,250,30);
+        label3.setFont(new Font("Times New Roman",Font.BOLD,20));
 
         // Adding components:
         loginPanel.add(label1);
@@ -53,6 +52,7 @@ public class Login {
         loginPanel.add(label2);
         loginPanel.add(field2);
         loginPanel.add(submit);
+        loginPanel.add(label3);
         submitHover();
         // submitAction();
     }
@@ -153,18 +153,4 @@ public class Login {
         // }
     }
 
-    // void submitAction() {
-    //     submit.addActionListener(new ActionListener() {
-
-    //         @Override
-    //         public void actionPerformed(ActionEvent e) {
-    //             authenticator();
-    //             Home.frame.getContentPane().removeAll();
-    //             Home.frame.repaint();
-    //             new ContCent();
-    //             Home.frame.validate(); 
-    //         }
-            
-    //     });
-    // }
 }
