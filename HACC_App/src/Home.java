@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -16,12 +15,12 @@ public class Home extends JFrame {
     // FlowLayout fl = new FlowLayout(300, 10, 500);
     public Home() {
         frame.setTitle("Home Automation Control Center");
-        frame.setSize(1000, 700);
+        frame.setSize(1100, 600);
         frame.setAlwaysOnTop(false);
         frame.setEnabled(true);
-        frame.setLocation(150, 100);
+        frame.setLocation(150, 50);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        frame.setLayout(new FlowLayout(300, 10, 300));
+        frame.setLayout(null);
         frame.setVisible(true);
 
         //  Adding the components
@@ -43,6 +42,7 @@ public class Home extends JFrame {
     }
 
     void loginConfig() {
+        login.setBounds(940,250,150,40);    //Sets the position of the button on the frame
         login.setText("Login");
         login.setContentAreaFilled(true);
         login.setEnabled(true);
