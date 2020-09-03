@@ -40,6 +40,7 @@ public class Login {
 
         // Submit button:
         submit.setText("Submit");
+        submit.setBounds(10, 350, 150, 45);
 
         // Adding components:
         loginPanel.add(label1);
