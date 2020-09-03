@@ -28,6 +28,8 @@ public class Login {
         // Username:
         label1 = new JLabel("Username");
         field1 = new JTextField(15);
+        label1.setBounds(10,180, 200, 40);
+        field1.setBounds(10, 220, 250, 30);
 
         // Password:
         label2 = new JLabel("Password");
