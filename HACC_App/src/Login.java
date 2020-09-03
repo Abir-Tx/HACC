@@ -34,6 +34,9 @@ public class Login {
         // Password:
         label2 = new JLabel("Password");
         field2 = new JPasswordField(15);
+        label2.setBounds(10, 260, 200, 40);
+        field2.setBounds(10, 300, 250, 30);
+
 
         // Submit button:
         submit.setText("Submit");
