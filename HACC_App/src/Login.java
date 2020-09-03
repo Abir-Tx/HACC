@@ -22,7 +22,8 @@ public class Login {
     Login() {
         Home.frame.add(loginPanel);
 
-        loginPanel.setLayout(new FlowLayout());
+        loginPanel.setLayout(null);
+        loginPanel.setSize(1100, 600);
         loginPanel.setVisible(true);
 
         // Username:
@@ -40,7 +41,6 @@ public class Login {
 
         // Submit button:
         submit.setText("Submit");
-        submit.setBounds(10, 350, 150, 45);
 
         // Adding components:
         loginPanel.add(label1);
