@@ -24,7 +24,7 @@ public class ContCent {
         contPanelWindow.setBounds(0, 200, 1100, 400);
 
         //Header creator 
-        headerDesigner.headerCreator("HAC Center", headerLabel);
+        headerDesigner.headerCreator("HAC Center", headerLabel,headerpanel);
 
         //header panel
         headerpanel.setVisible(true);
