@@ -9,4 +9,7 @@ public class About {
         aboutFrame.setAutoRequestFocus(true);
         aboutFrame.setBounds(400,200, 500, 300);
     }
+    public static void main(String[] args) {
+        new About();
+    }
 }
