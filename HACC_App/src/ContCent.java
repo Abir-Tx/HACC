@@ -12,11 +12,11 @@ public class ContCent {
 
 
     ContCent(){
-        frame.setVisible(true);
-        // Home.frame.add(contPanelWindow);
-        frame.add(contPanelWindow);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 300);
+        JFrame f = new JFrame();
+        f.setVisible(true);
+        f.setBounds(150, 50, 1100, 600);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         Home.frame.add(contPanelWindow);
         contPanelWindow.setVisible(true);
