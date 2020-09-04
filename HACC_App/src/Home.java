@@ -13,7 +13,7 @@ public class Home extends JFrame {
     JButton login = new JButton();
     JButton exit = new JButton();
 
-    DesignUtils designer = new DesignUtils();
+    public static DesignUtils designer = new DesignUtils();  //Static object which will be used in other classes too
 
     // FlowLayout fl = new FlowLayout(300, 10, 500);
     public Home() {

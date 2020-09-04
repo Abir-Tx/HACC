@@ -39,7 +39,8 @@ public class Login {
 
         // Submit button:
         submit.setText("Submit");
-        submit.setBounds(10, 350, 150, 45);
+        submit.setBounds(10, 350, 130, 40);
+        Home.designer.BtnFontDesigner(submit);
 
         //Header
         label3 = new JLabel("HACC Login");
@@ -75,14 +76,12 @@ public class Login {
 
             @Override
             public void mousePressed(MouseEvent e) {
-                // TODO Auto-generated method stub
-
+                submit.setForeground(Color.RED);
             }
 
             @Override
             public void mouseReleased(MouseEvent e) {
-                // TODO Auto-generated method stub
-
+                submit.setForeground(Color.BLACK);
             }
 
             @Override
@@ -92,7 +91,8 @@ public class Login {
 
             @Override
             public void mouseExited(MouseEvent e) {
-                submit.setBackground(Color.WHITE);
+                Home.designer.defBtnColor(submit);
+
             }
 
         });
