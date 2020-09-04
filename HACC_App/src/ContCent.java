@@ -1,6 +1,7 @@
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
+import lib.DesignUtils;
 
 public class ContCent {
     JFrame frame = new JFrame();
@@ -12,7 +13,7 @@ public class ContCent {
     JButton motor, pc;
     JButton speaker = new JButton();
     JLabel headerLabel = new JLabel();
-
+    DesignUtils headerDesigner = new DesignUtils();
 
     ContCent(){
         Home.frame.add(contPanelWindow);
@@ -22,11 +23,8 @@ public class ContCent {
         contPanelWindow.setBackground(Color.LIGHT_GRAY);
         contPanelWindow.setBounds(0, 200, 1100, 400);
 
-        //header label 
-        headerLabel.setText("HAC Center");
-        headerLabel.setForeground(Color.white); 
-        headerLabel.setFont(new Font("Times New Roman",Font.BOLD,50));
-        headerLabel.setBounds(300, 50, 500, 100);
+        //Header creator 
+        headerDesigner.headerCreator("HAC Center", headerLabel);
 
         //header panel
         headerpanel.setVisible(true);
