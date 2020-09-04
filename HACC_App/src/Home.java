@@ -6,12 +6,13 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 public class Home extends JFrame {
     protected static JFrame frame = new JFrame();
     JButton login = new JButton();
     JButton exit = new JButton();
-    
+
     // FlowLayout fl = new FlowLayout(300, 10, 500);
     public Home() {
         frame.setTitle("Home Automation Control Center");
@@ -51,6 +52,9 @@ public class Home extends JFrame {
         login.setFocusable(true);
         login.setToolTipText("Press to go to the login windows");
 
+        //Button design
+        BtnFontDesigner(login);
+
     }
 
     void exitConfig() {
@@ -62,6 +66,9 @@ public class Home extends JFrame {
         exit.setFocusable(true);
         exit.setToolTipText("Press to exit the program");
         // login.setSize(100 , 50);
+
+        //Button design
+        BtnFontDesigner(exit);
     }
 
     void loginHover() {
@@ -80,7 +87,9 @@ public class Home extends JFrame {
 
             @Override
             public void mouseExited(MouseEvent arg0) {
-                login.setBackground(Color.WHITE);
+                // login.setBackground(Color.WHITE);
+                // login.setBackground(UIManager.getColor("Default button Color"));
+                defBtnColor(login);
             }
 
             @Override
@@ -112,7 +121,8 @@ public class Home extends JFrame {
 
             @Override
             public void mouseExited(MouseEvent arg0) {
-                exit.setBackground(Color.WHITE);
+                // exit.setBackground(Color.WHITE);
+                defBtnColor(exit);
             }
 
             @Override
@@ -172,7 +182,14 @@ public class Home extends JFrame {
         frame.add(exit);
     }
 
+    //Extra Global Methods
     void defBtnColor(JButton button){
         button.setBackground(UIManager.getColor("Default button Color"));
+    }
+    void BtnFontDesigner(JButton button){
+        button.setFont(new Font("Copperplate",Font.PLAIN,20));
+        button.setBorderPainted(true);
+        button.setContentAreaFilled(true);
+        button.setFocusable(false);
     }
 }
