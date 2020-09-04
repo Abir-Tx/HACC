@@ -6,8 +6,7 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.UIManager;
-import lib.DesignUtils;
+import lib.DesignUtils; // User Defined Package
 
 public class Home extends JFrame {
     protected static JFrame frame = new JFrame();
@@ -85,7 +84,7 @@ public class Home extends JFrame {
 
             @Override
             public void mouseEntered(MouseEvent arg0) {
-                login.setBackground(Color.BLUE);
+                login.setBackground(Color.LIGHT_GRAY);
 
             }
 
@@ -98,12 +97,12 @@ public class Home extends JFrame {
 
             @Override
             public void mousePressed(MouseEvent arg0) {
-
+                exit.setForeground(Color.BLUE);
             }
 
             @Override
             public void mouseReleased(MouseEvent arg0) {
-
+                exit.setForeground(Color.BLACK);
             }
 
         });
@@ -119,7 +118,7 @@ public class Home extends JFrame {
 
             @Override
             public void mouseEntered(MouseEvent arg0) {
-                exit.setBackground(Color.BLUE);
+                exit.setBackground(Color.LIGHT_GRAY);
 
             }
 
@@ -131,11 +130,12 @@ public class Home extends JFrame {
 
             @Override
             public void mousePressed(MouseEvent arg0) {
-
+                exit.setForeground(Color.BLUE);
             }
 
             @Override
             public void mouseReleased(MouseEvent arg0) {
+                exit.setForeground(Color.BLACK);
 
             }
 
@@ -185,7 +185,4 @@ public class Home extends JFrame {
         frame.add(login);
         frame.add(exit);
     }
-
-    //Extra Global Methods
-    
 }
