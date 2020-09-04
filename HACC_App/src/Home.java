@@ -155,7 +155,7 @@ public class Home extends JFrame {
                     System.exit(0);   //Exits the program
                 }
                 else if(userAnswer == JOptionPane.NO_OPTION){
-                    JOptionPane.showMessageDialog(frame, "You opted for using this program more");
+                    JOptionPane.showMessageDialog(frame, "You opted for using this program more","Returning To Program....",JOptionPane.INFORMATION_MESSAGE);
                 }
                 else{
                     //Do nothing :-) 
