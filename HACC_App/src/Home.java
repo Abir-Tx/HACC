@@ -6,12 +6,15 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.event.MouseInputListener;
+
 import lib.DesignUtils; // User Defined Package
 
 public class Home extends JFrame {
     protected static JFrame frame = new JFrame();
     JButton login = new JButton();
     JButton exit = new JButton();
+    JButton about = new JButton();
 
     public static DesignUtils designer = new DesignUtils();  //Static object which will be used in other classes too
 
@@ -38,6 +41,9 @@ public class Home extends JFrame {
         exitConfig();
         exitHover();
         
+        //About Button
+        aboutConfig();
+        aboutHover();
 
         //Button Functionality
         exitAction(); //Exit button functionality
@@ -74,6 +80,19 @@ public class Home extends JFrame {
         
     }
 
+    void aboutConfig(){
+        about.setBounds(940, 320, 150, 40);
+        about.setText("About");
+        about.setText("About");
+        about.setContentAreaFilled(true);
+        about.setEnabled(true);
+        about.setFocusPainted(true);
+        about.setFocusable(true);
+        about.setToolTipText("Press to know about the software");
+
+        designer.BtnFontDesigner(about);
+        
+    }
     void loginHover() {
         login.addMouseListener(new MouseListener() {
 
@@ -142,6 +161,49 @@ public class Home extends JFrame {
         });
     }
 
+    void aboutHover(){
+        about.addMouseListener(new MouseInputListener(){
+
+            @Override
+            public void mouseClicked(MouseEvent arg0) {
+                new About();
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent arg0) {
+                about.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent arg0) {
+                designer.defBtnColor(about);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent arg0) {
+                about.setForeground(Color.BLUE);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent arg0) {
+                about.setForeground(Color.BLACK);
+            }
+
+            @Override
+            public void mouseDragged(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+            
+        });
+    }
+
     void exitAction() {     //The exit button actions defined here
         exit.addActionListener(new ActionListener() {
 
@@ -184,5 +246,6 @@ public class Home extends JFrame {
     void adder(){
         frame.add(login);
         frame.add(exit);
+        frame.add(about);
     }
 }
