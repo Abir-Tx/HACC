@@ -36,7 +36,7 @@ public class ContCent {
         tv.setBounds(230, 10, 100, 30);
 
         speaker.setText("Smart Speaker");
-        speaker.setBounds(240, 10, 100, 30);
+        speaker.setBounds(340, 10, 100, 30);
 
 
         //Adding components
