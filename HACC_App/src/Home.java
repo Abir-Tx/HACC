@@ -171,4 +171,8 @@ public class Home extends JFrame {
         frame.add(login);
         frame.add(exit);
     }
+
+    void defBtnColor(JButton button){
+        button.setBackground(UIManager.getColor("Default button Color"));
+    }
 }
