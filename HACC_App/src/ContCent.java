@@ -20,6 +20,12 @@ public class ContCent {
         contPanelWindow.setBackground(Color.LIGHT_GRAY);
         contPanelWindow.setBounds(0, 200, 1100, 400);
 
+        //header label 
+        headerLabel.setText("HAC Center");
+        headerLabel.setForeground(Color.white); 
+        headerLabel.setFont(new Font("Times New Roman",Font.BOLD,50));
+        headerLabel.setBounds(300, 55, 500, 100);
+
         //header panel
         headerpanel.setVisible(true);
         headerpanel.setBackground(Color.BLACK);
