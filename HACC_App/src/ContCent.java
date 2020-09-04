@@ -4,7 +4,8 @@ import java.awt.*;
 
 public class ContCent {
     JFrame frame = new JFrame();
-    JPanel contPanelWindow = new JPanel(new FlowLayout());
+    JPanel contPanelWindow = new JPanel(null);
+    JPanel headerpanel = new JPanel(null);
     JButton light = new JButton();
     JButton fan = new JButton();
     JButton tv = new JButton();
@@ -12,27 +13,30 @@ public class ContCent {
 
 
     ContCent(){
-        JFrame f = new JFrame();
-        f.setVisible(true);
-        f.setBounds(150, 50, 1100, 600);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
         Home.frame.add(contPanelWindow);
-        contPanelWindow.setVisible(true);
-        contPanelWindow.setBackground(Color.BLACK);
-        contPanelWindow.setBounds(0, 0, 1100, 600);
+        Home.frame.add(headerpanel);
 
+        contPanelWindow.setVisible(true);
+        contPanelWindow.setBackground(Color.LIGHT_GRAY);
+        contPanelWindow.setBounds(0, 200, 1100, 400);
+
+        //header panel
+        headerpanel.setVisible(true);
+        headerpanel.setBackground(Color.BLACK);
+        headerpanel.setBounds(0,0,1100,200);
+
+        //Button configs
         light.setText("Light");
-        // light.setOpaque(false);
-        // light.setFocusPainted(false);
-        // light.setBorderPainted(false);
-        // light.setContentAreaFilled(false);
-        // light.setBorder(BorderFactory.createTitledBorder("Test"));
+        light.setBounds(10, 10, 100, 30);
 
         fan.setText("Fan");
+        fan.setBounds(120, 10, 100, 30);
+
         tv.setText("Smart TV");
+        tv.setBounds(230, 10, 100, 30);
+
         speaker.setText("Smart Speaker");
+        speaker.setBounds(240, 10, 100, 30);
 
 
         //Adding components
@@ -40,11 +44,5 @@ public class ContCent {
         contPanelWindow.add(fan);
         contPanelWindow.add(tv);
         contPanelWindow.add(speaker);
-
-        f.add(contPanelWindow);
-    }
-
-    public static void main(String[] args) {
-        new ContCent();
     }
 }

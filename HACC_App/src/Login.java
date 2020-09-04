@@ -116,7 +116,7 @@ public class Login {
                 welcomeMsg();
                 Home.frame.getContentPane().removeAll();
                 Home.frame.repaint();
-                // new ContCent();
+                new ContCent();
                 Home.frame.validate();
                 break;
             }
