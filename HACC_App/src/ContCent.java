@@ -9,7 +9,9 @@ public class ContCent {
     JButton light = new JButton();
     JButton fan = new JButton();
     JButton tv = new JButton();
+    JButton motor, pc;
     JButton speaker = new JButton();
+    JLabel headerLabel = new JLabel();
 
 
     ContCent(){
@@ -24,7 +26,7 @@ public class ContCent {
         headerLabel.setText("HAC Center");
         headerLabel.setForeground(Color.white); 
         headerLabel.setFont(new Font("Times New Roman",Font.BOLD,50));
-        headerLabel.setBounds(300, 55, 500, 100);
+        headerLabel.setBounds(300, 50, 500, 100);
 
         //header panel
         headerpanel.setVisible(true);
@@ -33,16 +35,24 @@ public class ContCent {
 
         //Button configs
         light.setText("Light");
-        light.setBounds(10, 10, 100, 30);
+        light.setBounds(50, 30, 300, 30);
 
         fan.setText("Fan");
-        fan.setBounds(120, 10, 100, 30);
+        fan.setBounds(400, 30, 300, 30);
 
         tv.setText("Smart TV");
-        tv.setBounds(230, 10, 100, 30);
+        tv.setBounds(750, 30, 300, 30);
 
         speaker.setText("Smart Speaker");
-        speaker.setBounds(340, 10, 100, 30);
+        speaker.setBounds(50, 100, 300, 30);
+
+        motor = new JButton();
+        motor.setText("Motor");
+        motor.setBounds(400, 100, 300,30);
+
+        pc = new JButton();
+        pc.setText("PC");
+        pc.setBounds(750, 100, 300, 30);
 
 
         //Adding components
@@ -50,5 +60,9 @@ public class ContCent {
         contPanelWindow.add(fan);
         contPanelWindow.add(tv);
         contPanelWindow.add(speaker);
+        contPanelWindow.add(motor);
+        contPanelWindow.add(pc);
+
+        headerpanel.add(headerLabel);
     }
 }
