@@ -7,11 +7,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+import lib.DesignUtils;
 
 public class Home extends JFrame {
     protected static JFrame frame = new JFrame();
     JButton login = new JButton();
     JButton exit = new JButton();
+
+    DesignUtils designer = new DesignUtils();
 
     // FlowLayout fl = new FlowLayout(300, 10, 500);
     public Home() {
@@ -53,7 +56,7 @@ public class Home extends JFrame {
         login.setToolTipText("Press to go to the login windows");
 
         //Button design
-        BtnFontDesigner(login);
+        designer.BtnFontDesigner(login);
 
     }
 
@@ -68,7 +71,8 @@ public class Home extends JFrame {
         // login.setSize(100 , 50);
 
         //Button design
-        BtnFontDesigner(exit);
+        designer.BtnFontDesigner(exit);
+        
     }
 
     void loginHover() {
@@ -89,7 +93,7 @@ public class Home extends JFrame {
             public void mouseExited(MouseEvent arg0) {
                 // login.setBackground(Color.WHITE);
                 // login.setBackground(UIManager.getColor("Default button Color"));
-                defBtnColor(login);
+                designer.defBtnColor(login);
             }
 
             @Override
@@ -122,7 +126,7 @@ public class Home extends JFrame {
             @Override
             public void mouseExited(MouseEvent arg0) {
                 // exit.setBackground(Color.WHITE);
-                defBtnColor(exit);
+                designer.defBtnColor(exit);
             }
 
             @Override
@@ -183,13 +187,5 @@ public class Home extends JFrame {
     }
 
     //Extra Global Methods
-    void defBtnColor(JButton button){
-        button.setBackground(UIManager.getColor("Default button Color"));
-    }
-    void BtnFontDesigner(JButton button){
-        button.setFont(new Font("Copperplate",Font.PLAIN,20));
-        button.setBorderPainted(true);
-        button.setContentAreaFilled(true);
-        button.setFocusable(false);
-    }
+    
 }
