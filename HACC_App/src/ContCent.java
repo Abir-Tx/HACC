@@ -26,11 +26,6 @@ public class ContCent {
         //Header creator 
         headerDesigner.headerCreator("HAC Center", headerLabel,headerpanel);
 
-        //header panel
-        headerpanel.setVisible(true);
-        headerpanel.setBackground(Color.BLACK);
-        headerpanel.setBounds(0,0,1100,200);
-
         //Button configs
         light.setText("Light");
         light.setBounds(50, 30, 300, 30);
@@ -62,5 +57,40 @@ public class ContCent {
         contPanelWindow.add(pc);
 
         headerpanel.add(headerLabel);
+
+
+        light.addMouseListener(new MouseListener(){
+
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                new Light();
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                // TODO Auto-generated method stub
+
+            }
+            
+        });
     }
+    
 }

@@ -2,6 +2,7 @@ package lib;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.UIManager;
 import java.awt.*;
 
@@ -15,7 +16,10 @@ public class DesignUtils {
         button.setContentAreaFilled(true);
         button.setFocusable(false);
     }
-    public void headerCreator(String string, JLabel headerLabel){
+    public void headerCreator(String string, JLabel headerLabel, JPanel headerpanel){
+        headerpanel.setVisible(true);
+        headerpanel.setBackground(Color.BLACK);
+        headerpanel.setBounds(0,0,1100,200);
         //header label 
         headerLabel.setText(string);
         headerLabel.setForeground(Color.white); 
