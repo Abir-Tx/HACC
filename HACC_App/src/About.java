@@ -17,13 +17,13 @@ public class About {
     JTextArea softDescrip = new JTextArea();
 
     About() {
-        aboutFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        aboutFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         aboutFrame.setVisible(true);
         aboutFrame.setAutoRequestFocus(true);
         aboutFrame.setBounds(400, 200, 600, 350);
         aboutFrame.setAlwaysOnTop(true);
         aboutFrame.setLayout(null);
-        aboutFrame.setResizable(true);
+        aboutFrame.setResizable(false);
         aboutFrame.setTitle("About");
         aboutFrame.setBackground(Color.WHITE);
 
@@ -66,7 +66,7 @@ public class About {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+                aboutFrame.setVisible(false);
             }
             
         });
@@ -79,8 +79,5 @@ public class About {
 
         aboutFrame.repaint();  
 
-    }
-    public static void main(String[] args) {
-        new About();
     }
 }
