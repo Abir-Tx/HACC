@@ -92,6 +92,7 @@ public class Login {
         username = field1.getText().toString();
         password = field2.getText().toString();
 
+        //Stored Password & username
         final ArrayList<String> registeredUsernames= new ArrayList<String>();
         registeredUsernames.add("Abir");
         registeredUsernames.add("Nazmul");
