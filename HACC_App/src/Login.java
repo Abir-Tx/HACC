@@ -1,6 +1,4 @@
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -16,25 +14,38 @@ import javax.swing.JToolTip;
 public class Login {
     JPanel loginPanel = new JPanel();
     JButton submit = new JButton();
-    JLabel label1, label2;
+    JLabel label1, label2, label3;
     JTextField field1, field2;
 
     Login() {
-        Home.frame.add(loginPanel);
+        Home.frame.add(loginPanel);  //Adding the panel to the frame
 
-        loginPanel.setLayout(new FlowLayout());
+        loginPanel.setLayout(null);
+        loginPanel.setSize(1100, 600);
         loginPanel.setVisible(true);
 
         // Username:
         label1 = new JLabel("Username");
         field1 = new JTextField(15);
+        label1.setBounds(10,180, 200, 40);
+        field1.setBounds(10, 220, 250, 30);
 
         // Password:
         label2 = new JLabel("Password");
         field2 = new JPasswordField(15);
+        label2.setBounds(10, 260, 200, 40);
+        field2.setBounds(10, 300, 250, 30);
+
 
         // Submit button:
         submit.setText("Submit");
+        submit.setBounds(10, 350, 130, 40);
+        Home.designer.BtnFontDesigner(submit);
+
+        //Header
+        label3 = new JLabel("HACC Login");
+        label3.setBounds(50,5,250,30);
+        label3.setFont(new Font("Times New Roman",Font.BOLD,20));
 
         // Adding components:
         loginPanel.add(label1);
@@ -42,6 +53,7 @@ public class Login {
         loginPanel.add(label2);
         loginPanel.add(field2);
         loginPanel.add(submit);
+        loginPanel.add(label3);
         submitHover();
         // submitAction();
     }
@@ -64,14 +76,12 @@ public class Login {
 
             @Override
             public void mousePressed(MouseEvent e) {
-                // TODO Auto-generated method stub
-
+                submit.setForeground(Color.RED);
             }
 
             @Override
             public void mouseReleased(MouseEvent e) {
-                // TODO Auto-generated method stub
-
+                submit.setForeground(Color.BLACK);
             }
 
             @Override
@@ -81,7 +91,8 @@ public class Login {
 
             @Override
             public void mouseExited(MouseEvent e) {
-                submit.setBackground(Color.WHITE);
+                Home.designer.defBtnColor(submit);
+
             }
 
         });
@@ -106,7 +117,7 @@ public class Login {
                 welcomeMsg();
                 Home.frame.getContentPane().removeAll();
                 Home.frame.repaint();
-                // new ContCent();
+                new ContCent();
                 Home.frame.validate();
                 break;
             }
@@ -143,18 +154,4 @@ public class Login {
         // }
     }
 
-    // void submitAction() {
-    //     submit.addActionListener(new ActionListener() {
-
-    //         @Override
-    //         public void actionPerformed(ActionEvent e) {
-    //             authenticator();
-    //             Home.frame.getContentPane().removeAll();
-    //             Home.frame.repaint();
-    //             new ContCent();
-    //             Home.frame.validate(); 
-    //         }
-            
-    //     });
-    // }
 }
