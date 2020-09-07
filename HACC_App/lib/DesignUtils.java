@@ -34,4 +34,8 @@ public class DesignUtils {
         back.setText("Go Back");
         BtnFontDesigner(back);
     }
+    public void onOffButtonCreator(JButton on, JButton off){
+        on.setBounds(500, 100, 100, 50);
+        on.setText("On");
+    }
 }
