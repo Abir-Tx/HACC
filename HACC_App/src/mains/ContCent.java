@@ -52,6 +52,9 @@ public class ContCent {
         pc.setText("PC");
         pc.setBounds(750, 100, 300, 30);
 
+        back.setText("G Back");
+        back.setBounds(50, 300, 120, 50);
+
 
         //Adding components
         contPanelWindow.add(light);
@@ -60,6 +63,7 @@ public class ContCent {
         contPanelWindow.add(speaker);
         contPanelWindow.add(motor);
         contPanelWindow.add(pc);
+        contPanelWindow.add(back);
 
         headerpanel.add(headerLabel);
 
