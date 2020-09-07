@@ -19,6 +19,7 @@ public class ContCent {
     JButton speaker = new JButton();
     JLabel headerLabel = new JLabel();
     DesignUtils headerDesigner = new DesignUtils();
+    JButton back = new JButton();
 
     public ContCent(){
         Home.frame.add(contPanelWindow);
