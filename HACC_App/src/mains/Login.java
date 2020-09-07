@@ -144,11 +144,9 @@ public class Login {
             } else if (!(username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i)))) {
                 if (username.equals(registeredUsernames.get(i)) && !password.equals(registeredPasswords.get(i))) {
                     JOptionPane.showMessageDialog(Home.frame, "Wrong Password ! Please recheck your Password");
-                } else if (!username.equals(registeredUsernames.get(i))
-                        && password.equals(registeredPasswords.get(i))) {
+                } else if (!username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i))) {
                     JOptionPane.showMessageDialog(Home.frame, "Wrong Username ! Please recheck your Username");
-                } else if (!(username.equals(registeredUsernames.get(i)))
-                        && !(password.equals(registeredPasswords.get(i)))) {
+                } else if (!(username.equals(registeredUsernames.get(i)))&& !(password.equals(registeredPasswords.get(i)))) {
                     if (username.length() == 0 || password.length() == 0) {
                         if(username.length() == 0 && password.length() == 0) {
                             errorMsg.setText("Both Fields cannot be empty");
