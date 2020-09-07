@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
-import java.util.Timer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -12,9 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
-import javax.swing.JPopupMenu;
 import javax.swing.JTextField;
-import javax.swing.JToolTip;
 
 public class Login {
     JPanel loginPanel = new JPanel();
@@ -56,6 +53,7 @@ public class Login {
         label3 = new JLabel("HACC Login");
         label3.setBounds(50, 5, 250, 30);
         label3.setFont(new Font("Times New Roman", Font.BOLD, 20));
+        label3.setForeground(Color.BLUE);
 
         // Adding components:
         loginPanel.add(label1);
