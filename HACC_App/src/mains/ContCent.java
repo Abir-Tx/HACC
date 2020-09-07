@@ -256,6 +256,17 @@ public class ContCent {
 
         });
 
+        back.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                Home.frame.getContentPane().removeAll();
+                new Login();
+                Home.frame.repaint();
+            }
+
+        });
+
     }
     
 }
