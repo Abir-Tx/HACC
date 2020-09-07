@@ -191,13 +191,11 @@ public class Home extends JFrame {
 
             @Override
             public void mouseDragged(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseMoved(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
             
