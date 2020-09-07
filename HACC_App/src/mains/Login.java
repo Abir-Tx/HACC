@@ -63,13 +63,16 @@ public class Login {
         loginPanel.add(submit);
         loginPanel.add(back);
         loginPanel.add(label3);
+
         submitHover();
+        backHover();
         // submitAction();
     }
 
     void welcomeMsg() {
         JOptionPane.showMessageDialog(loginPanel, "You have successfully logged in", "Login Confirmation", JOptionPane.INFORMATION_MESSAGE);
     }
+    
     void notAllowedMsg(){
         JOptionPane.showMessageDialog(loginPanel,"Incorrect login or password. Try again",
         "Error",JOptionPane.ERROR_MESSAGE);
@@ -161,6 +164,42 @@ public class Login {
         // {
         //     notAllowedMsg();
         // }
+    }
+
+    void backHover(){
+        back.addMouseListener(new MouseListener(){
+
+            @Override
+            public void mouseClicked(MouseEvent arg0) {
+                loginPanel.setVisible(false);
+                new Home();
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent arg0) {
+                back.setBackground(Color.GRAY);
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent arg0) {
+                Home.designer.defBtnColor(back);
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent arg0) {
+                back.setForeground(Color.RED);
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent arg0) {
+                back.setForeground(Color.BLACK);
+
+            }
+            
+        });
     }
 
 }
