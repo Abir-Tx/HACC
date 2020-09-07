@@ -18,6 +18,7 @@ public class Login {
     JButton submit = new JButton();
     JLabel label1, label2, label3;
     JTextField field1, field2;
+    JButton back = new JButton();
 
     Login() {
         Home.frame.add(loginPanel);  //Adding the panel to the frame
@@ -41,8 +42,13 @@ public class Login {
 
         // Submit button:
         submit.setText("Submit");
-        submit.setBounds(10, 350, 130, 40);
+        submit.setBounds(10, 350, 120, 40);
         Home.designer.BtnFontDesigner(submit);
+
+        //Back Button
+        back.setText("Home");
+        back.setBounds(140,350,120,40);
+        Home.designer.BtnFontDesigner(back);
 
         //Header
         label3 = new JLabel("HACC Login");
@@ -55,6 +61,7 @@ public class Login {
         loginPanel.add(label2);
         loginPanel.add(field2);
         loginPanel.add(submit);
+        loginPanel.add(back);
         loginPanel.add(label3);
         submitHover();
         // submitAction();
