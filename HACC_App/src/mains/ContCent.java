@@ -92,6 +92,7 @@ public class ContCent {
             }
             
         });
+        
         fan.addMouseListener(new MouseListener(){
 
             @Override
@@ -153,6 +154,104 @@ public class ContCent {
             }
 
         });
+        
+        speaker.addMouseListener(new MouseListener(){
+
+            @Override
+            public void mouseClicked(MouseEvent arg0) {
+                new Speaker();
+            }   
+
+            @Override
+            public void mouseEntered(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        motor.addMouseListener(new MouseListener(){
+
+            @Override
+            public void mouseClicked(MouseEvent arg0) {
+                new Motor();
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+        });
+        
+        pc.addMouseListener(new MouseListener(){
+
+            @Override
+            public void mouseClicked(MouseEvent arg0) {
+                new Pc();
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+        });
+
     }
     
 }
