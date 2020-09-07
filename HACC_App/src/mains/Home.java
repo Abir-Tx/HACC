@@ -1,3 +1,5 @@
+package mains;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,7 +13,7 @@ import javax.swing.event.MouseInputListener;
 import lib.DesignUtils; // User Defined Package
 
 public class Home extends JFrame {
-    protected static JFrame frame = new JFrame();
+    public static JFrame frame = new JFrame();
     JButton login = new JButton();
     JButton exit = new JButton();
     JButton about = new JButton();

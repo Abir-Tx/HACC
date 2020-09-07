@@ -1,8 +1,14 @@
+package devices;
+
+import utils.*;
+import mains.Home;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 
 import lib.DesignUtils;
+
 public class Fan {
     DesignUtils designer = new DesignUtils();
     Utils utils = new Utils();
@@ -11,7 +17,7 @@ public class Fan {
     JButton back = new JButton();
     JPanel bodyPanel = new JPanel();
     
-    Fan(){
+    public Fan(){
         Home.frame.getContentPane().removeAll();
         Home.frame.add(headerPanel);
         Home.frame.add(bodyPanel);

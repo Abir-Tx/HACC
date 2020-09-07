@@ -1,3 +1,8 @@
+package mains;
+
+
+import devices.*;
+
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +20,7 @@ public class ContCent {
     JLabel headerLabel = new JLabel();
     DesignUtils headerDesigner = new DesignUtils();
 
-    ContCent(){
+    public ContCent(){
         Home.frame.add(contPanelWindow);
         Home.frame.add(headerpanel);
 
@@ -114,6 +119,39 @@ public class ContCent {
 
             }
             
+        });
+        
+        tv.addMouseListener(new MouseListener(){
+
+            @Override
+            public void mouseClicked(MouseEvent arg0) {
+                new TV();
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent arg0) {
+                // TODO Auto-generated method stub
+
+            }
+
         });
     }
     

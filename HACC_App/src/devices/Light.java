@@ -1,3 +1,8 @@
+package devices;
+
+import utils.*;
+import mains.Home;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JButton;
@@ -11,7 +16,7 @@ public class Light {
     JButton back = new JButton();
     JPanel bodyPanel = new JPanel();
 
-    Light() {
+    public Light() {
         Home.frame.getContentPane().removeAll();
         Home.frame.add(headerPanel);
         Home.frame.add(bodyPanel);
