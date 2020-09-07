@@ -38,7 +38,6 @@ public class Light {
             public void actionPerformed(ActionEvent e) {
                 new ContCent();
             } 
-            
         });
     }
 }
