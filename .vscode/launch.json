@@ -2,6 +2,16 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
+=======
+            "name": "CodeLens (Launch) - About",
+            "request": "launch",
+            "mainClass": "About",
+            "projectName": "HACC_79292d67"
+        },
+        {
+            "type": "java",
+>>>>>>> features
             "name": "CodeLens (Launch) - ContCent",
             "request": "launch",
             "mainClass": "ContCent",
