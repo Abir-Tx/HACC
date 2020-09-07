@@ -150,27 +150,51 @@ public class Login {
                 } else if (!(username.equals(registeredUsernames.get(i)))
                         && !(password.equals(registeredPasswords.get(i)))) {
                     if (username.length() == 0 || password.length() == 0) {
-                        errorMsg.setText("Fields cannot be empty");
+                        if(username.length() == 0 && password.length() == 0) {
+                            errorMsg.setText("Both Fields cannot be empty");
+                            errorMsg.setForeground(Color.RED);
+                            errorMsg.setToolTipText("Fields should be filled with correct infos");
+                            loginPanel.repaint();
+    
+                            int delay = 4000; // milliseconds
+                            ActionListener taskPerformer = new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent evt) {
+                                    errorMsg.setVisible(false);
+                                }
+                            };
+                            new javax.swing.Timer(delay, taskPerformer).start();
+                        }
+                        else{
+                            errorMsg.setText("Any of the Fields cannot be empty");
+                            errorMsg.setForeground(Color.RED);
+                            errorMsg.setToolTipText("Fields should be filled with correct infos");
+                            loginPanel.repaint();
+
+                            int delay = 4000; // milliseconds
+                            ActionListener taskPerformer = new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent evt) {
+                                    errorMsg.setVisible(false);
+                                }
+                            };
+                            new javax.swing.Timer(delay, taskPerformer).start();
+                        }
+                    }else {
+                        errorMsg.setText("Invalid Authentication ! Try Again");
+                        errorMsg.setForeground(Color.RED);
+                        errorMsg.setToolTipText("This is an error message. Please input correct username and password to login");
                         loginPanel.repaint();
-                    } else {
-                        
-                        int delay = 3000; // milliseconds
+
+                        int delay = 4000; // milliseconds
                         ActionListener taskPerformer = new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent evt) {
-                                errorMsg.setText("Invalid Authentication ! Try Again");
-                                loginPanel.repaint();
+                                errorMsg.setVisible(false);
                             }
                         };
                         new javax.swing.Timer(delay, taskPerformer).start();
                     }
-                    // JToolTip toolTip=new JToolTip();
-                    // toolTip.setToolTipText("Try again");
-                    // Home.frame.add(toolTip);
-                    // loginPanel.add(toolTip);
-                    // toolTip.setVisible(true);
-                    // toolTip.setSize(300, 150);
-                    
                 }
             }
             // else{
