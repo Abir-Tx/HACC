@@ -36,8 +36,8 @@ public class Light {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                
-            }
+                new ContCent();
+            } 
             
         });
     }
