@@ -26,4 +26,12 @@ public class DesignUtils {
         headerLabel.setFont(new Font("Times New Roman",Font.BOLD,50));
         headerLabel.setBounds(300, 50, 500, 100);
     }
+
+    public void bodyPanelCreatorWithBackButton(JPanel bodyPanel, JButton back){
+        bodyPanel.setBounds(0, 200, 1100, 400);
+
+        back.setBounds(20, 300, 120, 50);
+        back.setText("Go Back");
+        BtnFontDesigner(back);
+    }
 }

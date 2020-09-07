@@ -13,11 +13,10 @@ public class Light {
         Home.frame.getContentPane().removeAll();
         Home.frame.add(headerPanel);
         Home.frame.add(bodyPanel);
-        designer.headerCreator("Light", header, headerPanel);
+
+        designer.headerCreator("Light", header, headerPanel);   //designing the header and creating the header
         
-        bodyPanel.setBounds(0, 200, 1100, 400);
-        back.setBounds(50, 30, 300, 30);
-        back.setText("Go Back");
+        designer.bodyPanelCreatorWithBackButton(bodyPanel, back); //Creating and designing the body panel and setting the back button
 
         bodyPanel.add(back);
         headerPanel.add(header);
