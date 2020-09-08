@@ -263,7 +263,7 @@ public class Home extends JFrame {
     }
 
     void logCreator() throws IOException {
-        File log = new File("Log.txt");
+        File log = new File("HACC_App/src/Log.txt");
         BufferedWriter writer = new BufferedWriter(new FileWriter(log));
 
         writer.write("------LOG SYSTEM OF HACC------");
