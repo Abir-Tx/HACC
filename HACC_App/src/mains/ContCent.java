@@ -276,7 +276,7 @@ public class ContCent {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Add the new Settings frame here
+                new Settings();
             }
 
         });
