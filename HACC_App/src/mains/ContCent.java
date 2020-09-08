@@ -22,6 +22,7 @@ public class ContCent {
     JButton back = new JButton();
     JRadioButton basic = new JRadioButton();
     JRadioButton advance = new JRadioButton();
+    JButton settings = new JButton();
 
     public ContCent(){
         Home.frame.add(contPanelWindow);
@@ -79,6 +80,7 @@ public class ContCent {
         contPanelWindow.add(pc);
         contPanelWindow.add(basic);
         contPanelWindow.add(advance);
+        contPanelWindow.add(settings);
         contPanelWindow.add(back);
 
         headerpanel.add(headerLabel);
@@ -274,7 +276,12 @@ public class ContCent {
             @Override
             public void actionPerformed(ActionEvent e){
                 if (advance.isSelected() == true) {
-                    
+                    settings.setText("Settings");
+                    settings.setBounds(50,170,300,30);
+                    settings.setVisible(true);
+                }
+                else if(advance.isSelected()==false){
+                    settings.setVisible(false);
                 }
             }
         });
