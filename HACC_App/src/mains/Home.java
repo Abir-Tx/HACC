@@ -266,7 +266,8 @@ public class Home extends JFrame {
         File log = new File("HACC_App/src/Log.txt");
         BufferedWriter writer = new BufferedWriter(new FileWriter(log));
 
-        writer.write("------LOG SYSTEM OF HACC------");
+        writer.write("\t\t\t------LOG SYSTEM OF HACC------");
+        writer.newLine();
         writer.newLine();
         writer.flush();
         writer.close();
