@@ -20,6 +20,9 @@ public class ContCent {
     JLabel headerLabel = new JLabel();
     DesignUtils headerDesigner = new DesignUtils();
     JButton back = new JButton();
+    JRadioButton basic = new JRadioButton();
+    JRadioButton advance = new JRadioButton();
+    ButtonGroup radioGroup = new ButtonGroup();
 
     public ContCent(){
         Home.frame.add(contPanelWindow);
@@ -53,8 +56,22 @@ public class ContCent {
         pc.setText("PC");
         pc.setBounds(750, 100, 300, 30);
 
-        back.setText("G Back");
+        back.setText("Go Back");
         back.setBounds(50, 300, 120, 50);
+
+        //Radio button configs
+        basic.setBounds(880,300,80,50);
+        basic.setText("Basic");
+        basic.setSelected(true);
+        basic.setBackground(Color.LIGHT_GRAY);
+
+        advance.setBounds(960,300,100,50);
+        advance.setText("Advanced");
+        advance.setSelected(false);
+        advance.setBackground(Color.LIGHT_GRAY);
+
+        radioGroup.add(basic);
+        radioGroup.add(advance);
 
 
         //Adding components
@@ -64,6 +81,8 @@ public class ContCent {
         contPanelWindow.add(speaker);
         contPanelWindow.add(motor);
         contPanelWindow.add(pc);
+        contPanelWindow.add(basic);
+        contPanelWindow.add(advance);
         contPanelWindow.add(back);
 
         headerpanel.add(headerLabel);
@@ -136,25 +155,21 @@ public class ContCent {
 
             @Override
             public void mouseEntered(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseExited(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mousePressed(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseReleased(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
@@ -169,25 +184,21 @@ public class ContCent {
 
             @Override
             public void mouseEntered(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseExited(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mousePressed(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseReleased(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
         });
@@ -200,25 +211,21 @@ public class ContCent {
 
             @Override
             public void mouseEntered(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseExited(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mousePressed(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseReleased(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
@@ -233,25 +240,21 @@ public class ContCent {
 
             @Override
             public void mouseEntered(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseExited(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mousePressed(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseReleased(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
