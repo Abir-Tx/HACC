@@ -22,7 +22,6 @@ public class ContCent {
     JButton back = new JButton();
     JRadioButton basic = new JRadioButton();
     JRadioButton advance = new JRadioButton();
-    ButtonGroup radioGroup = new ButtonGroup();
 
     public ContCent(){
         Home.frame.add(contPanelWindow);
@@ -69,9 +68,6 @@ public class ContCent {
         advance.setText("Advanced");
         advance.setSelected(false);
         advance.setBackground(Color.LIGHT_GRAY);
-
-        radioGroup.add(basic);
-        radioGroup.add(advance);
 
 
         //Adding components
@@ -270,7 +266,6 @@ public class ContCent {
             }
 
         });
-
     }
     
 }
