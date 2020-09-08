@@ -87,7 +87,7 @@ public class ContCent {
 
         //Adding the Action Listener for radio buttons
         advanceAction();
-
+        basicAction();
         light.addMouseListener(new MouseListener(){
 
             @Override
@@ -279,11 +279,26 @@ public class ContCent {
                     settings.setText("Settings");
                     settings.setBounds(50,170,300,30);
                     settings.setVisible(true);
+
+                    basic.setSelected(false);
                 }
                 else if(advance.isSelected()==false){
                     settings.setVisible(false);
                 }
             }
+        });
+    }
+    private void basicAction(){
+        basic.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                if(basic.isSelected() == true){
+                    advance.setSelected(false);
+                    settings.setVisible(false);
+                }
+            }
+
         });
     }
 }
