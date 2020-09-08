@@ -16,6 +16,8 @@ public class Fan {
     JPanel headerPanel = new JPanel();
     JButton back = new JButton();
     JPanel bodyPanel = new JPanel();
+    JButton on = new JButton();
+    JButton off = new JButton();
     
     public Fan(){
         Home.frame.getContentPane().removeAll();
@@ -24,10 +26,14 @@ public class Fan {
 
         designer.headerCreator("Fan", header, headerPanel);
         designer.bodyPanelCreatorWithBackButton(bodyPanel, back); // Creating and designing the body panel and setting the back button
+        designer.onOffButtonCreator(on, off);
 
         utils.backAction(back);
+        utils.onOffAction(on, off);
 
         bodyPanel.add(back);
+        bodyPanel.add(on);
+        bodyPanel.add(off);
         headerPanel.add(header);
         Home.frame.repaint();
     }

@@ -5,7 +5,6 @@ import mains.Home;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JButton;
 
 import lib.DesignUtils;
@@ -19,7 +18,6 @@ public class Light {
     JPanel bodyPanel = new JPanel();
     JButton on = new JButton();
     JButton off = new JButton();
-    JTextArea isOnisOff = new JTextArea();
 
     public Light() {
         Home.frame.getContentPane().removeAll();
@@ -32,12 +30,11 @@ public class Light {
         designer.onOffButtonCreator(on, off);
         
         utils.backAction(back);
-        utils.onOffAction(on, off,isOnisOff);
+        utils.onOffAction(on, off);
 
         bodyPanel.add(back);
         bodyPanel.add(on);
         bodyPanel.add(off);
-        bodyPanel.add(isOnisOff);
         headerPanel.add(header);
         Home.frame.repaint();
     }
