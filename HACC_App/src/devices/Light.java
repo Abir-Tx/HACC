@@ -5,11 +5,7 @@ import mains.Home;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
-import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
+import javax.swing.JTextArea;
 import javax.swing.JButton;
 
 import lib.DesignUtils;
@@ -23,6 +19,7 @@ public class Light {
     JPanel bodyPanel = new JPanel();
     JButton on = new JButton();
     JButton off = new JButton();
+    JTextArea isOnisOff = new JTextArea();
 
     public Light() {
         Home.frame.getContentPane().removeAll();
@@ -33,30 +30,14 @@ public class Light {
         designer.bodyPanelCreatorWithBackButton(bodyPanel, back); // Creating and designing the body panel and setting
                                                                   // the back button
         designer.onOffButtonCreator(on, off);
-
-        on.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                designer.defBtnColor(off);
-                on.setBackground(Color.BLUE);
-
-            }
-        });
-
-        off.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                designer.defBtnColor(on);
-                off.setBackground(Color.BLUE);
-            }
-        });
         
         utils.backAction(back);
+        utils.onOffAction(on, off,isOnisOff);
 
         bodyPanel.add(back);
         bodyPanel.add(on);
         bodyPanel.add(off);
+        bodyPanel.add(isOnisOff);
         headerPanel.add(header);
         Home.frame.repaint();
     }
