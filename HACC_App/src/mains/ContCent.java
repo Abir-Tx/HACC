@@ -88,6 +88,7 @@ public class ContCent {
         //Adding the Action Listener for radio buttons
         advanceAction();
         basicAction();
+
         light.addMouseListener(new MouseListener(){
 
             @Override
@@ -270,6 +271,15 @@ public class ContCent {
             }
 
         });
+
+        settings.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Add the new Settings frame here
+            }
+
+        });
     }
     private void advanceAction(){
         advance.addActionListener(new ActionListener(){
@@ -301,4 +311,5 @@ public class ContCent {
 
         });
     }
+    
 }
