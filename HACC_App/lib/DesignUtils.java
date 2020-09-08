@@ -37,5 +37,10 @@ public class DesignUtils {
     public void onOffButtonCreator(JButton on, JButton off){
         on.setBounds(500, 100, 100, 50);
         on.setText("On");
+        BtnFontDesigner(on);        
+
+        off.setBounds(500, 160, 100, 50);
+        off.setText("Off");
+        BtnFontDesigner(off);
     }
 }
