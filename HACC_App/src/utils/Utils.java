@@ -16,4 +16,24 @@ public class Utils {
             } 
         });
     }
+    public void onOffAction(JButton on, JButton off){
+        DesignUtils designer = new DesignUtils();
+        on.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                designer.defBtnColor(off);
+                on.setBackground(java.awt.Color.BLUE);
+
+            }
+        });
+
+        off.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                designer.defBtnColor(on);
+                off.setBackground(java.awt.Color.BLUE);
+            }
+        });
+    }
 }
