@@ -83,6 +83,8 @@ public class ContCent {
 
         headerpanel.add(headerLabel);
 
+        //Adding the Action Listener for radio buttons
+        advanceAction();
 
         light.addMouseListener(new MouseListener(){
 
@@ -267,5 +269,14 @@ public class ContCent {
 
         });
     }
-    
+    private void advanceAction(){
+        advance.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                if (advance.isSelected() == true) {
+                    
+                }
+            }
+        });
+    }
 }
