@@ -67,6 +67,8 @@ public class Login {
         submitHover();
         backHover();
         // submitAction();
+        submitEnterPressAction();
+        
     }
 
     void welcomeMsg() {
@@ -239,6 +241,17 @@ public class Login {
 
             }
             
+        });
+    }
+    void submitEnterPressAction(){
+        loginPanel.getRootPane().setDefaultButton(submit);
+        submit.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               authenticator();
+            }
+
         });
     }
 
