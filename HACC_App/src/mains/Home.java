@@ -5,6 +5,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -18,7 +23,7 @@ public class Home extends JFrame {
     JButton exit = new JButton();
     JButton about = new JButton();
 
-    public static DesignUtils designer = new DesignUtils();  //Static object which will be used in other classes too
+    public static DesignUtils designer = new DesignUtils(); // Static object which will be used in other classes too
 
     // FlowLayout fl = new FlowLayout(300, 10, 500);
     public Home() {
@@ -32,7 +37,7 @@ public class Home extends JFrame {
         frame.setResizable(false);
         frame.setVisible(true);
 
-        //  Adding the components
+        // Adding the components
         adder();
 
         // Hover Effect Adder
@@ -42,19 +47,26 @@ public class Home extends JFrame {
         // Applying the effects/configs
         exitConfig();
         exitHover();
-        
-        //About Button
+
+        // About Button
         aboutConfig();
         aboutHover();
 
-        //Button Functionality
-        exitAction(); //Exit button functionality
-        loginAction(); //Login button functionality
+        // Button Functionality
+        exitAction(); // Exit button functionality
+        loginAction(); // Login button functionality
+
+        //Log Adder
+        try {
+            logCreator();
+        } catch (IOException e) {
+            System.out.println("Error Log file not Created");
+        }
 
     }
 
     void loginConfig() {
-        login.setBounds(940,220,150,40);    //Sets the position of the button on the frame
+        login.setBounds(940, 220, 150, 40); // Sets the position of the button on the frame
         login.setText("Login");
         login.setContentAreaFilled(true);
         login.setEnabled(true);
@@ -62,13 +74,13 @@ public class Home extends JFrame {
         login.setFocusable(true);
         login.setToolTipText("Press to go to the login windows");
 
-        //Button design
+        // Button design
         designer.BtnFontDesigner(login);
 
     }
 
     void exitConfig() {
-        exit.setBounds(940,270,150,40);    //Sets the position of the button on the frame
+        exit.setBounds(940, 270, 150, 40); // Sets the position of the button on the frame
         exit.setText("Exit");
         exit.setContentAreaFilled(true);
         exit.setEnabled(true);
@@ -77,12 +89,12 @@ public class Home extends JFrame {
         exit.setToolTipText("Press to exit the program");
         // login.setSize(100 , 50);
 
-        //Button design
+        // Button design
         designer.BtnFontDesigner(exit);
-        
+
     }
 
-    void aboutConfig(){
+    void aboutConfig() {
         about.setBounds(940, 320, 150, 40);
         about.setText("About");
         about.setText("About");
@@ -93,8 +105,9 @@ public class Home extends JFrame {
         about.setToolTipText("Press to know about the software");
 
         designer.BtnFontDesigner(about);
-        
+
     }
+
     void loginHover() {
         login.addMouseListener(new MouseListener() {
 
@@ -163,8 +176,8 @@ public class Home extends JFrame {
         });
     }
 
-    void aboutHover(){
-        about.addMouseListener(new MouseInputListener(){
+    void aboutHover() {
+        about.addMouseListener(new MouseInputListener() {
 
             @Override
             public void mouseClicked(MouseEvent arg0) {
@@ -200,52 +213,62 @@ public class Home extends JFrame {
             public void mouseMoved(MouseEvent arg0) {
 
             }
-            
+
         });
     }
 
-    void exitAction() {     //The exit button actions defined here
+    void exitAction() { // The exit button actions defined here
         exit.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                // System.exit(0);         //Both of these code works
+                // System.exit(0); //Both of these code works
                 // frame.dispose();
                 int userAnswer;
                 userAnswer = JOptionPane.showConfirmDialog(frame, "Are you sure ?");
-                if (userAnswer == JOptionPane.YES_OPTION){
-                    System.exit(0);   //Exits the program
-                }
-                else if(userAnswer == JOptionPane.NO_OPTION){
-                    JOptionPane.showMessageDialog(frame, "You opted for using this program more","Returning To Program....",JOptionPane.INFORMATION_MESSAGE);
-                }
-                else{
-                    //Do nothing :-) 
+                if (userAnswer == JOptionPane.YES_OPTION) {
+                    System.exit(0); // Exits the program
+                } else if (userAnswer == JOptionPane.NO_OPTION) {
+                    JOptionPane.showMessageDialog(frame, "You opted for using this program more",
+                            "Returning To Program....", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    // Do nothing :-)
                 }
             }
-            
+
         });
     }
 
-    void loginAction(){
-        login.addActionListener(new ActionListener(){
+    void loginAction() {
+        login.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
-                frame.getContentPane().removeAll();      //Removes everything from the current window/frame
+            public void actionPerformed(ActionEvent e) {
+                frame.getContentPane().removeAll(); // Removes everything from the current window/frame
                 // frame.revalidate();
-                frame.repaint();                            //Updates the Frame windows live
+                frame.repaint(); // Updates the Frame windows live
 
-                //Second Panel 
+                // Second Panel
                 new Login();
 
-                //Re adding the new contents to the main frame
-                frame.validate(); 
+                // Re adding the new contents to the main frame
+                frame.validate();
             }
         });
     }
-    void adder(){
+
+    void adder() {
         frame.add(login);
         frame.add(exit);
         frame.add(about);
+    }
+
+    void logCreator() throws IOException {
+        File log = new File("Log.txt");
+        BufferedWriter writer = new BufferedWriter(new FileWriter(log));
+
+        writer.write("------LOG SYSTEM OF HACC------");
+        writer.newLine();
+        writer.flush();
+        writer.close();
     }
 }
