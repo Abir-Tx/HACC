@@ -9,13 +9,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 
-public class Motor {
+public class Motor extends Functioner {
     DesignUtils designer = new DesignUtils();
     Utils utils = new Utils();
     JLabel header = new JLabel();
     JPanel headerPanel = new JPanel();
     JButton back = new JButton();
     JPanel bodyPanel = new JPanel();
+    JButton on = new JButton();
+    JButton off = new JButton();
 
     public Motor() {
         Home.frame.getContentPane().removeAll();
@@ -26,6 +28,8 @@ public class Motor {
         designer.bodyPanelCreatorWithBackButton(bodyPanel, back); // Creating and designing the body panel and setting the back button
 
         utils.backAction(back);
+        utils.onOffAction(on, off);
+        onOffWriter(on, off, "Motor");
 
         bodyPanel.add(back);
         headerPanel.add(header);
