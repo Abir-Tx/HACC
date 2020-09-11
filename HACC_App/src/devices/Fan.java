@@ -9,7 +9,7 @@ import javax.swing.JButton;
 
 import lib.DesignUtils;
 
-public class Fan {
+public class Fan extends Functioner {
     DesignUtils designer = new DesignUtils();
     Utils utils = new Utils();
     JLabel header = new JLabel();
@@ -30,6 +30,8 @@ public class Fan {
 
         utils.backAction(back);
         utils.onOffAction(on, off);
+
+        onOffWriter(on, off, "Fan");
 
         bodyPanel.add(back);
         bodyPanel.add(on);

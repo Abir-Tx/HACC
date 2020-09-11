@@ -12,12 +12,11 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import javax.swing.JButton;
 
 import lib.DesignUtils;
 
-public class Light {
+public class Light extends Functioner {
     DesignUtils designer = new DesignUtils();
     Utils utils = new Utils();
     JLabel header = new JLabel();
@@ -40,36 +39,7 @@ public class Light {
         utils.backAction(back);
         utils.onOffAction(on, off);
 
-        on.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                File file = new File("HACC_App/src/Log.txt");
-                try{
-                    BufferedWriter logWritter = new BufferedWriter(new FileWriter(file, true));
-                    logWritter.append("The light turned on by User");
-                    logWritter.newLine();
-                    logWritter.close();
-                }catch(IOException ex){
-                    System.out.println("File not found");
-                }
-            }
-            
-        });
-        off.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent off){
-                File file = new File("HACC_App/src/Log.txt");
-                try {
-                    BufferedWriter logWritter = new BufferedWriter(new FileWriter(file, true));
-                    logWritter.append("The light turned of by User");
-                    logWritter.newLine();
-                    logWritter.close();
-                } catch (Exception e) {
-                    System.out.println("File not found");
-                }
-            }
-        });
+        onOffWriter(on,off, "Light");
 
         bodyPanel.add(back);
         bodyPanel.add(on);
