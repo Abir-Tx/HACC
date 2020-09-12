@@ -2,13 +2,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - App",
-            "request": "launch",
-            "mainClass": "App",
-            "projectName": "HACC_21fddddc"
-        },
-        {
-            "type": "java",
             "name": " Java Debug (Launch)",
             "request": "launch",
             "mainClass": "${file}",
