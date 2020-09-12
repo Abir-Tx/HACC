@@ -12,7 +12,7 @@
             "name": " Java Debug (Launch)",
             "request": "launch",
             "mainClass": "${file}",
-            "preLaunchTask": "Java Build",
+            // "preLaunchTask": "Java Build",
             "stopOnEntry": true
         },
         {
