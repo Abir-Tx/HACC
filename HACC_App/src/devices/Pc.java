@@ -29,8 +29,9 @@ public class Pc extends Functioner {
 
         utils.backAction(back);
         utils.onOffAction(on, off);
-        //TO-DO: Implement a extra button  and action for the pc here
 
+        onOffWriter(on, off, "PC");
+        
         bodyPanel.add(back);
         headerPanel.add(header);
         Home.frame.repaint();
