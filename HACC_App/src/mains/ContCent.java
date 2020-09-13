@@ -1,6 +1,5 @@
 package mains;
 
-
 import devices.*;
 
 import java.awt.event.*;
@@ -19,8 +18,12 @@ public class ContCent {
     JButton speaker = new JButton();
     JLabel headerLabel = new JLabel();
     DesignUtils headerDesigner = new DesignUtils();
+    JButton back = new JButton();
+    JRadioButton basic = new JRadioButton();
+    JRadioButton advance = new JRadioButton();
+    JButton settings = new JButton();
 
-    public ContCent(){
+    public ContCent() {
         Home.frame.add(contPanelWindow);
         Home.frame.add(headerpanel);
 
@@ -28,10 +31,10 @@ public class ContCent {
         contPanelWindow.setBackground(Color.LIGHT_GRAY);
         contPanelWindow.setBounds(0, 200, 1100, 400);
 
-        //Header creator 
-        headerDesigner.headerCreator("HAC Center", headerLabel,headerpanel);
+        // Header creator
+        headerDesigner.headerCreator("HAC Center", headerLabel, headerpanel);
 
-        //Button configs
+        // Button configs
         light.setText("Light");
         light.setBounds(50, 30, 300, 30);
 
@@ -46,25 +49,45 @@ public class ContCent {
 
         motor = new JButton();
         motor.setText("Motor");
-        motor.setBounds(400, 100, 300,30);
+        motor.setBounds(400, 100, 300, 30);
 
         pc = new JButton();
         pc.setText("PC");
         pc.setBounds(750, 100, 300, 30);
 
+        back.setText("Go Back");
+        back.setBounds(50, 300, 120, 50);
 
-        //Adding components
+        // Radio button configs
+        basic.setBounds(880, 300, 80, 50);
+        basic.setText("Basic");
+        basic.setSelected(true);
+        basic.setBackground(Color.LIGHT_GRAY);
+
+        advance.setBounds(960, 300, 100, 50);
+        advance.setText("Advanced");
+        advance.setSelected(false);
+        advance.setBackground(Color.LIGHT_GRAY);
+
+        // Adding components
         contPanelWindow.add(light);
         contPanelWindow.add(fan);
         contPanelWindow.add(tv);
         contPanelWindow.add(speaker);
         contPanelWindow.add(motor);
         contPanelWindow.add(pc);
+        contPanelWindow.add(basic);
+        contPanelWindow.add(advance);
+        contPanelWindow.add(settings);
+        contPanelWindow.add(back);
 
         headerpanel.add(headerLabel);
 
+        // Adding the Action Listener for radio buttons
+        advanceAction();
+        basicAction();
 
-        light.addMouseListener(new MouseListener(){
+        light.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -90,10 +113,10 @@ public class ContCent {
             public void mouseExited(MouseEvent e) {
 
             }
-            
+
         });
-        
-        fan.addMouseListener(new MouseListener(){
+
+        fan.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -119,10 +142,10 @@ public class ContCent {
             public void mouseExited(MouseEvent e) {
 
             }
-            
+
         });
-        
-        tv.addMouseListener(new MouseListener(){
+
+        tv.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent arg0) {
@@ -131,62 +154,54 @@ public class ContCent {
 
             @Override
             public void mouseEntered(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseExited(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mousePressed(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseReleased(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
         });
-        
-        speaker.addMouseListener(new MouseListener(){
+
+        speaker.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent arg0) {
                 new Speaker();
-            }   
+            }
 
             @Override
             public void mouseEntered(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseExited(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mousePressed(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseReleased(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
         });
-        motor.addMouseListener(new MouseListener(){
+        motor.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent arg0) {
@@ -195,31 +210,27 @@ public class ContCent {
 
             @Override
             public void mouseEntered(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseExited(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mousePressed(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseReleased(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
         });
-        
-        pc.addMouseListener(new MouseListener(){
+
+        pc.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent arg0) {
@@ -228,30 +239,76 @@ public class ContCent {
 
             @Override
             public void mouseEntered(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseExited(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mousePressed(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
             @Override
             public void mouseReleased(MouseEvent arg0) {
-                // TODO Auto-generated method stub
 
             }
 
         });
 
+        back.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                Home.frame.getContentPane().removeAll();
+                new Login();
+                Home.frame.repaint();
+            }
+
+        });
+
+        settings.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Settings();
+            }
+
+        });
     }
-    
+
+    private void advanceAction() {
+        advance.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (advance.isSelected() == true) {
+                    settings.setText("Settings");
+                    settings.setBounds(50, 170, 300, 30);
+                    settings.setVisible(true);
+
+                    basic.setSelected(false);
+                } else if (advance.isSelected() == false) {
+                    settings.setVisible(false);
+                }
+            }
+        });
+    }
+
+    private void basicAction() {
+        basic.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                if (basic.isSelected() == true) {
+                    advance.setSelected(false);
+                    settings.setVisible(false);
+                }
+            }
+
+        });
+    }
+
 }

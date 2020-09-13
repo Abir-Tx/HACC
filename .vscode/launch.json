@@ -2,30 +2,6 @@
     "configurations": [
         {
             "type": "java",
-<<<<<<< HEAD
-=======
-            "name": "CodeLens (Launch) - About",
-            "request": "launch",
-            "mainClass": "About",
-            "projectName": "HACC_79292d67"
-        },
-        {
-            "type": "java",
->>>>>>> features
-            "name": "CodeLens (Launch) - ContCent",
-            "request": "launch",
-            "mainClass": "ContCent",
-            "projectName": "HACC_21fddddc"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - ContCent",
-            "request": "launch",
-            "mainClass": "ContCent",
-            "projectName": "HACC_79292d67"
-        },
-        {
-            "type": "java",
             "name": "CodeLens (Launch) - App",
             "request": "launch",
             "mainClass": "App",
@@ -43,7 +19,6 @@
             "name": " Java Debug (Launch)",
             "request": "launch",
             "mainClass": "${file}",
-            "preLaunchTask": "Java Build",
             "stopOnEntry": true
         },
         {
