@@ -238,7 +238,9 @@ public class Home extends JFrame {
         admin.addMouseListener(new MouseListener(){
             @Override
             public void mouseClicked(MouseEvent arg0) {
+                Home.frame.getContentPane().removeAll();
                 new Admin();
+                Home.frame.repaint();
             }
 
             @Override
