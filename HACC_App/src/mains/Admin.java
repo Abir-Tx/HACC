@@ -25,8 +25,10 @@ public class Admin extends Login {
         // Stored Password & username
         final ArrayList<String> registeredUsernames = new ArrayList<String>();
         registeredUsernames.add("Abir");
+        registeredUsernames.add("admin");
         final ArrayList<String> registeredPasswords = new ArrayList<String>();
-        registeredPasswords.add("1234");
+        registeredPasswords.add("1111");
+        registeredPasswords.add("admin");
 
         for (int i = 0; i < registeredUsernames.toArray().length; i++) {
             if (username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i))) {
