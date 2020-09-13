@@ -35,7 +35,7 @@ public class Admin extends Login {
                 welcomeMsg();
                 Home.frame.getContentPane().removeAll();
                 Home.frame.repaint();
-                new About(); // creating the control center
+                new AdminCent(); // creating the Admin control center
                 Home.frame.validate();
                 break;
             } else if (!(username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i)))) {
