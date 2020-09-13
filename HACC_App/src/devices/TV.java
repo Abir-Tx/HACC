@@ -1,14 +1,25 @@
 package devices;
+
 import utils.*;
 import mains.Home;
 import lib.DesignUtils;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Timer;
+
 import javax.swing.JButton;
 
-
 public class TV extends Functioner {
+    static int volumeLevel = 0;
+
     DesignUtils designer = new DesignUtils();
     Utils utils = new Utils();
     JLabel header = new JLabel();
@@ -24,7 +35,8 @@ public class TV extends Functioner {
         Home.frame.add(bodyPanel);
 
         designer.headerCreator("Smart TV", header, headerPanel); // designing the header and creating the header
-        designer.bodyPanelCreatorWithBackButton(bodyPanel, back); // Creating and designing the body panel and setting the back button
+        designer.bodyPanelCreatorWithBackButton(bodyPanel, back); // Creating and designing the body panel and setting
+                                                                  // the back button
 
         designer.onOffButtonCreator(on, off);
 
@@ -32,10 +44,45 @@ public class TV extends Functioner {
         utils.onOffAction(on, off);
         onOffWriter(on, off, "Smart TV");
 
+        volumeConfig();
+
         bodyPanel.add(back);
         bodyPanel.add(on);
         bodyPanel.add(off);
         headerPanel.add(header);
         Home.frame.repaint();
+    }
+
+    private void volumeConfig() {
+        JButton volumeUp = new JButton("V Up");
+        JButton volumeDown = new JButton("V Down");
+
+        volumeUp.setBounds(380, 100, 100, 110);
+        volumeUp.setToolTipText("Volume UP Button. Press to increase the volume");
+
+        volumeDown.setBounds(620, 100, 100, 110);
+        volumeDown.setToolTipText("Volume Down Button. Press to decrease the volume");
+
+        bodyPanel.add(volumeUp);
+        bodyPanel.add(volumeDown);
+
+        ActionListener al = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                volumeLevel++;
+                BufferedWriter logger;
+                try {
+                    logger = new BufferedWriter(new FileWriter(file, true));
+                    logger.append("Volume increated to " + volumeLevel+" By User at "+date);
+                    logger.newLine();
+                    logger.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+        };
+        volumeUp.addActionListener(al);
     }
 }

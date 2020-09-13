@@ -8,7 +8,9 @@ import java.io.IOException;
 import java.awt.event.*;
 import javax.swing.JButton;
 
-public class Functioner {
+import lib.DesignUtils;
+
+public class Functioner extends DesignUtils {
     public File file = new File("HACC_App/src/Log.txt");
     public java.util.Date date = new java.util.Date();
 
