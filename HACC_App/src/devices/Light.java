@@ -9,6 +9,10 @@ import javax.swing.JRadioButton;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import javax.swing.JButton;
 
@@ -41,7 +45,6 @@ public class Light extends Functioner {
 
         onOffWriter(on, off, "Light");
 
-        // Adding radio buttons configs and Actions
         brightnessConfig();
 
         bodyPanel.add(back);
@@ -53,7 +56,7 @@ public class Light extends Functioner {
         Home.frame.repaint();
     }
 
-    private void brightnessConfig() {
+    private void brightnessConfig(){
         brightness_50.setBounds(350, 220, 150, 50);
         brightness_50.setText("Brightness 50%");
 
@@ -66,6 +69,14 @@ public class Light extends Functioner {
             public void actionPerformed(ActionEvent e) {
                 if (brightness_50.isSelected() == true) {
                     brightness_100.setSelected(false);
+                    try {
+                        BufferedWriter brightnessWriter = new BufferedWriter(new FileWriter(file, true));
+                        brightnessWriter.append(" The Light brightness set to 50 percent by User on "+date);
+                        brightnessWriter.newLine();
+                        brightnessWriter.close();
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
                 }
             }
             
@@ -76,6 +87,14 @@ public class Light extends Functioner {
             public void actionPerformed(ActionEvent e){
                 if(brightness_100.isSelected() == true){
                     brightness_50.setSelected(false);
+                    try {
+                        BufferedWriter brightnessWriter = new BufferedWriter(new FileWriter(file, true));
+                        brightnessWriter.append(" The Light brightness set to 100 percent by User on "+date);
+                        brightnessWriter.newLine();
+                        brightnessWriter.close();
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
                 }
             }
         });

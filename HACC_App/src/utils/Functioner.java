@@ -9,31 +9,32 @@ import java.awt.event.*;
 import javax.swing.JButton;
 
 public class Functioner {
-    public void onOffWriter(JButton on, JButton off, String device){
-        java.util.Date date = new java.util.Date(); 
+    public File file = new File("HACC_App/src/Log.txt");
+    public java.util.Date date = new java.util.Date();
+
+
+    public void onOffWriter(JButton on, JButton off, String device) {
         on.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                File file = new File("HACC_App/src/Log.txt");
-                try{
+                try {
                     BufferedWriter logWritter = new BufferedWriter(new FileWriter(file, true));
-                    logWritter.append("The "+device+" turned on by User on "+date);
+                    logWritter.append("The " + device + " turned on by User on " + date);
                     logWritter.newLine();
                     logWritter.close();
-                }catch(IOException ex){
+                } catch (IOException ex) {
                     System.out.println("File not found");
                 }
             }
-            
+
         });
-        off.addActionListener(new ActionListener(){
+        off.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent off){
-                File file = new File("HACC_App/src/Log.txt");
+            public void actionPerformed(ActionEvent off) {
                 try {
                     BufferedWriter logWritter = new BufferedWriter(new FileWriter(file, true));
-                    logWritter.append("The "+device+" turned off by User on "+date);
+                    logWritter.append("The " + device + " turned off by User on " + date);
                     logWritter.newLine();
                     logWritter.close();
                 } catch (Exception e) {
