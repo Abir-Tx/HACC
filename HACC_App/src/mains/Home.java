@@ -267,6 +267,7 @@ public class Home extends JFrame {
                 int userAnswer;
                 userAnswer = JOptionPane.showConfirmDialog(frame, "Are you sure ?");
                 if (userAnswer == JOptionPane.YES_OPTION) {
+                    System.out.println("Exiting the program......\nThanks for using the program\nFrom: Mushfiqur Rahman Abir");
                     System.exit(0); // Exits the program
                 } else if (userAnswer == JOptionPane.NO_OPTION) {
                     JOptionPane.showMessageDialog(frame, "You opted for using this program more",
