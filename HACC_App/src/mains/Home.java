@@ -59,14 +59,6 @@ public class Home extends JFrame {
         // Button Functionality
         exitAction(); // Exit button functionality
         loginAction(); // Login button functionality
-
-        // Log Adder
-        try {
-            logCreator();
-        } catch (IOException e) {
-            System.out.println("Error Log file not Created");
-        }
-
     }
 
     void loginConfig() {
@@ -309,16 +301,5 @@ public class Home extends JFrame {
         frame.add(exit);
         frame.add(about);
         frame.add(admin);
-    }
-
-    void logCreator() throws IOException {
-        File log = new File("HACC_App/src/Log.txt");
-        BufferedWriter writer = new BufferedWriter(new FileWriter(log));
-
-        writer.write("\t\t\t------LOG SYSTEM OF HACC------");
-        writer.newLine();
-        writer.newLine();
-        writer.flush();
-        writer.close();
     }
 }
