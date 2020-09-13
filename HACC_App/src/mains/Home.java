@@ -9,7 +9,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -22,6 +21,7 @@ public class Home extends JFrame {
     JButton login = new JButton();
     JButton exit = new JButton();
     JButton about = new JButton();
+    JButton admin = new JButton();
 
     public static DesignUtils designer = new DesignUtils(); // Static object which will be used in other classes too
 
@@ -51,6 +51,10 @@ public class Home extends JFrame {
         // About Button
         aboutConfig();
         aboutHover();
+
+        //Admin Button
+        adminConfig();
+        adminHover();
 
         // Button Functionality
         exitAction(); // Exit button functionality
@@ -106,6 +110,19 @@ public class Home extends JFrame {
 
         designer.BtnFontDesigner(about);
 
+    }
+
+    void adminConfig(){
+        admin.setBounds(940, 170, 150, 40);
+        admin.setText("Admin");
+        admin.setContentAreaFilled(true);
+        admin.setEnabled(true);
+        admin.setFocusPainted(true);
+        admin.setFocusable(true);
+        admin.setToolTipText("Press to go to the admin panel");
+
+        //Button Design
+        designer.BtnFontDesigner(admin);
     }
 
     void loginHover() {
@@ -217,6 +234,35 @@ public class Home extends JFrame {
         });
     }
 
+    void adminHover(){
+        admin.addMouseListener(new MouseListener(){
+            @Override
+            public void mouseClicked(MouseEvent arg0) {
+                new Admin();
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent arg0) {
+                admin.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent arg0) {
+                designer.defBtnColor(admin);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent arg0) {
+                admin.setForeground(Color.BLUE);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent arg0) {
+                admin.setForeground(Color.BLACK);
+            }
+        });
+    }
+
     void exitAction() { // The exit button actions defined here
         exit.addActionListener(new ActionListener() {
 
@@ -260,6 +306,7 @@ public class Home extends JFrame {
         frame.add(login);
         frame.add(exit);
         frame.add(about);
+        frame.add(admin);
     }
 
     void logCreator() throws IOException {
