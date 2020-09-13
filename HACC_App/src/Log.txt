@@ -1,19 +1,152 @@
 			------LOG SYSTEM OF HACC------
 
-Volume increated to 1 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume decreased to 0 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume decreased to -1 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume increated to 0 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume increated to 1 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume increated to 2 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume increated to 3 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume increated to 4 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume increated to 5 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume increated to 6 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume decreased to 5 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume decreased to 4 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume decreased to 3 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume decreased to 2 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume decreased to 1 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume decreased to 0 By User at Sun Sep 13 13:55:57 BDT 2020
-Volume decreased to -1 By User at Sun Sep 13 13:55:57 BDT 2020
+The Smart TV turned on by User on Sun Sep 13 14:36:19 BDT 2020
+The Smart TV turned off by User on Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 1 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 0 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to -1 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 0 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 1 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 2 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 3 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 4 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 5 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 6 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 7 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 8 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 9 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 10 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 11 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 12 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 13 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 14 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 15 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 16 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 17 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 18 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 19 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 20 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 21 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 22 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 23 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 24 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 25 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 26 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 27 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 28 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 29 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 30 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 31 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 32 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 33 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 34 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 35 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 36 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 37 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 38 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 39 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 40 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 41 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 42 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 43 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 44 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 45 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 46 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 47 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 48 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 49 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 50 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 51 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 52 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 53 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 54 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 55 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 56 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 57 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 58 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 59 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 60 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 61 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 62 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 63 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 64 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 65 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 66 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 67 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 68 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 69 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 70 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 71 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 72 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 73 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 74 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 75 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 76 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 77 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 78 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 79 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 80 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 81 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 82 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 83 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 84 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 85 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 86 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 87 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 88 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 89 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 90 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 91 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 92 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 93 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 94 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 95 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 96 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 97 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 98 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 99 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 100 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 101 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 100 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 99 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 98 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 99 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 100 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 99 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 98 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 99 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 100 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 101 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 100 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 99 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 100 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 101 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 100 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 99 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 98 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 97 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 96 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume decreased to 95 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 96 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 97 By User at Sun Sep 13 14:36:19 BDT 2020
+Volume increated to 98 By User at Sun Sep 13 14:36:19 BDT 2020
+The Smart TV turned on by User on Sun Sep 13 14:36:19 BDT 2020
+The Smart TV turned on by User on Sun Sep 13 14:36:19 BDT 2020
+The Smart TV turned off by User on Sun Sep 13 14:36:19 BDT 2020
+The Smart TV turned off by User on Sun Sep 13 14:36:19 BDT 2020
+The Smart TV turned off by User on Sun Sep 13 14:36:19 BDT 2020
+The Motor turned on by User on Sun Sep 13 14:37:30 BDT 2020
+The Motor turned off by User on Sun Sep 13 14:37:30 BDT 2020
+The Light turned on by User on Sun Sep 13 14:37:35 BDT 2020
+The Light turned off by User on Sun Sep 13 14:37:35 BDT 2020
+ The Light brightness set to 50 percent by User on Sun Sep 13 14:37:35 BDT 2020
+ The Light brightness set to 100 percent by User on Sun Sep 13 14:37:35 BDT 2020
+The Light turned on by User on Sun Sep 13 14:37:35 BDT 2020
+ The Light brightness set to 50 percent by User on Sun Sep 13 14:37:35 BDT 2020
+The Smart Speaker turned on by User on Sun Sep 13 14:37:41 BDT 2020
+The Smart Speaker turned off by User on Sun Sep 13 14:37:41 BDT 2020
+The PC turned on by User on Sun Sep 13 14:37:43 BDT 2020
+The PC turned off by User on Sun Sep 13 14:37:43 BDT 2020
+Volume decreased to 97 By User at Sun Sep 13 14:37:45 BDT 2020
+The Smart TV turned on by User on Sun Sep 13 14:37:45 BDT 2020
+The Smart TV turned off by User on Sun Sep 13 14:37:45 BDT 2020

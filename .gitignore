@@ -25,3 +25,6 @@ hs_err_pid*
 #VS Code Files
 .vscode/*
 launch.json
+
+#Log
+Log.txt
