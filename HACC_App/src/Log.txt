@@ -1,31 +1,6 @@
 			------LOG SYSTEM OF HACC------
 
-Speaker Volume increated to 5 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 10 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 15 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 20 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 25 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 30 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 35 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 40 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 45 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 50 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 55 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 60 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 65 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 70 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 75 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 80 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 85 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 90 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 95 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 100 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume increated to 105 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume decreased to 100 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume decreased to 95 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume decreased to 90 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume decreased to 85 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume decreased to 80 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume decreased to 75 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume decreased to 70 By User at Sun Sep 13 22:35:04 BDT 2020
-Speaker Volume decreased to 65 By User at Sun Sep 13 22:35:04 BDT 2020
+The PC turned on by User on Sun Sep 13 23:21:01 BDT 2020
+The PC has been put to sleep by User at Sun Sep 13 23:21:01 BDT 2020
+The PC has been woke up by the User at Sun Sep 13 23:21:01 BDT 2020
+The PC turned off by User on Sun Sep 13 23:21:01 BDT 2020
