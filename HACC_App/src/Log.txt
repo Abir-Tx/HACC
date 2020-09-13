@@ -1,4 +1,2 @@
 			------LOG SYSTEM OF HACC------
 
-The Motor turned on by User on Sun Sep 13 09:28:23 BDT 2020
-The Motor turned off by User on Sun Sep 13 09:28:23 BDT 2020

@@ -30,7 +30,7 @@ public class TV extends Functioner {
 
         utils.backAction(back);
         utils.onOffAction(on, off);
-        onOffWriter(on, off, "Motor");
+        onOffWriter(on, off, "Smart TV");
 
         bodyPanel.add(back);
         bodyPanel.add(on);

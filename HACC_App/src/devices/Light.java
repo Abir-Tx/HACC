@@ -5,6 +5,11 @@ import mains.Home;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 
 import lib.DesignUtils;
@@ -18,6 +23,8 @@ public class Light extends Functioner {
     JPanel bodyPanel = new JPanel();
     JButton on = new JButton();
     JButton off = new JButton();
+    JRadioButton brightness_50 = new JRadioButton();
+    JRadioButton brightness_100 = new JRadioButton();
 
     public Light() {
         Home.frame.getContentPane().removeAll();
@@ -32,12 +39,45 @@ public class Light extends Functioner {
         utils.backAction(back);
         utils.onOffAction(on, off);
 
-        onOffWriter(on,off, "Light");
+        onOffWriter(on, off, "Light");
+
+        // Adding radio buttons configs and Actions
+        brightnessConfig();
 
         bodyPanel.add(back);
         bodyPanel.add(on);
         bodyPanel.add(off);
+        bodyPanel.add(brightness_50);
+        bodyPanel.add(brightness_100);
         headerPanel.add(header);
         Home.frame.repaint();
+    }
+
+    private void brightnessConfig() {
+        brightness_50.setBounds(350, 220, 150, 50);
+        brightness_50.setText("Brightness 50%");
+
+        brightness_100.setBounds(650, 220, 150, 50);
+        brightness_100.setText("Brightness 100%");
+
+        brightness_50.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (brightness_50.isSelected() == true) {
+                    brightness_100.setSelected(false);
+                }
+            }
+            
+        });
+
+        brightness_100.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                if(brightness_100.isSelected() == true){
+                    brightness_50.setSelected(false);
+                }
+            }
+        });
     }
 }
