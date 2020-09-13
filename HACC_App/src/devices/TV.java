@@ -5,6 +5,7 @@ import mains.Home;
 import lib.DesignUtils;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import java.awt.Color;
@@ -69,13 +70,21 @@ public class TV extends Functioner {
         ActionListener al = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                volumeLevel++;
                 BufferedWriter logger;
                 try {
-                    logger = new BufferedWriter(new FileWriter(file, true));
-                    logger.append("Volume increated to " + volumeLevel+" By User at "+date);
-                    logger.newLine();
-                    logger.close();
+                    if(volumeLevel > 100){
+                        JOptionPane info = new JOptionPane("Volume cannot be more than 100");
+                        info.setBounds(0, 0, 300, 200);
+                        bodyPanel.add(info);
+                    }
+                    else{
+                        volumeLevel++;
+                        logger = new BufferedWriter(new FileWriter(file, true));
+                        logger.append("Volume increated to " + volumeLevel+" By User at "+date);
+                        logger.newLine();
+                        logger.close();
+                    }
+                    
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -84,5 +93,31 @@ public class TV extends Functioner {
 
         };
         volumeUp.addActionListener(al);
+
+
+        volumeDown.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                BufferedWriter logger;
+                try {
+                    if(volumeLevel < 0){
+                        JOptionPane info = new JOptionPane("Volume cannot be less than 0");
+                        info.setBounds(0, 0, 300, 200);
+                        bodyPanel.add(info);
+                    }
+                    else{
+                        volumeLevel--;
+                        logger = new BufferedWriter(new FileWriter(file, true));
+                        logger.append("Volume decreased to " + volumeLevel+" By User at "+date);
+                        logger.newLine();
+                        logger.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            
+        });
     }
 }

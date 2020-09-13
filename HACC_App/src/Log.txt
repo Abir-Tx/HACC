@@ -1,26 +1,19 @@
 			------LOG SYSTEM OF HACC------
 
-The Smart TV turned on by User on Sun Sep 13 13:39:36 BDT 2020
-The Smart TV turned off by User on Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 1 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 2 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 3 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 4 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 5 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 6 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 7 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 8 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 9 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 10 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 11 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 12 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 13 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 14 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 15 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 16 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 17 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 18 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 19 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 20 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 21 By User at Sun Sep 13 13:39:36 BDT 2020
-Volume increated to 22 By User at Sun Sep 13 13:39:36 BDT 2020
+Volume increated to 1 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume decreased to 0 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume decreased to -1 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume increated to 0 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume increated to 1 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume increated to 2 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume increated to 3 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume increated to 4 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume increated to 5 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume increated to 6 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume decreased to 5 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume decreased to 4 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume decreased to 3 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume decreased to 2 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume decreased to 1 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume decreased to 0 By User at Sun Sep 13 13:55:57 BDT 2020
+Volume decreased to -1 By User at Sun Sep 13 13:55:57 BDT 2020
