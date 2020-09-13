@@ -5,6 +5,13 @@
             "name": "CodeLens (Launch) - App",
             "request": "launch",
             "mainClass": "App",
+            "projectName": "HACC_79292d67"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "App",
             "projectName": "HACC_21fddddc"
         },
         {

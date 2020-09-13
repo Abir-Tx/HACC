@@ -1,2 +1,12 @@
 			------LOG SYSTEM OF HACC------
 
+The Light turned on by User on Sun Sep 13 11:54:17 BDT 2020
+The Light turned off by User on Sun Sep 13 11:54:17 BDT 2020
+The Fan turned on by User on Sun Sep 13 11:54:23 BDT 2020
+The Fan turned off by User on Sun Sep 13 11:54:23 BDT 2020
+The Smart TV turned on by User on Sun Sep 13 11:54:25 BDT 2020
+The Smart TV turned off by User on Sun Sep 13 11:54:25 BDT 2020
+The Smart Speaker turned off by User on Sun Sep 13 11:54:27 BDT 2020
+The Smart Speaker turned on by User on Sun Sep 13 11:54:27 BDT 2020
+The PC turned on by User on Sun Sep 13 11:54:31 BDT 2020
+The PC turned off by User on Sun Sep 13 11:54:31 BDT 2020
