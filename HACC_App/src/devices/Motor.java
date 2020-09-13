@@ -27,11 +27,15 @@ public class Motor extends Functioner {
         designer.headerCreator("Motor", header, headerPanel); // designing the header and creating the header
         designer.bodyPanelCreatorWithBackButton(bodyPanel, back); // Creating and designing the body panel and setting the back button
 
+        designer.onOffButtonCreator(on, off);
+
         utils.backAction(back);
         utils.onOffAction(on, off);
         onOffWriter(on, off, "Motor");
 
         bodyPanel.add(back);
+        bodyPanel.add(on);
+        bodyPanel.add(off);
         headerPanel.add(header);
         Home.frame.repaint();
     }
