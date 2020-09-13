@@ -68,7 +68,7 @@ public class Login {
         backHover();
         // submitAction();
         submitEnterPressAction();
-        
+
     }
 
     void welcomeMsg() {
@@ -144,16 +144,18 @@ public class Login {
             } else if (!(username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i)))) {
                 if (username.equals(registeredUsernames.get(i)) && !password.equals(registeredPasswords.get(i))) {
                     JOptionPane.showMessageDialog(Home.frame, "Wrong Password ! Please recheck your Password");
-                } else if (!username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i))) {
+                } else if (!username.equals(registeredUsernames.get(i))
+                        && password.equals(registeredPasswords.get(i))) {
                     JOptionPane.showMessageDialog(Home.frame, "Wrong Username ! Please recheck your Username");
-                } else if (!(username.equals(registeredUsernames.get(i)))&& !(password.equals(registeredPasswords.get(i)))) {
+                } else if (!(username.equals(registeredUsernames.get(i)))
+                        && !(password.equals(registeredPasswords.get(i)))) {
                     if (username.length() == 0 || password.length() == 0) {
-                        if(username.length() == 0 && password.length() == 0) {
+                        if (username.length() == 0 && password.length() == 0) {
                             errorMsg.setText("Both Fields cannot be empty");
                             errorMsg.setForeground(Color.RED);
                             errorMsg.setToolTipText("Fields should be filled with correct infos");
                             loginPanel.repaint();
-    
+
                             int delay = 4000; // milliseconds
                             ActionListener taskPerformer = new ActionListener() {
                                 @Override
@@ -162,8 +164,7 @@ public class Login {
                                 }
                             };
                             new javax.swing.Timer(delay, taskPerformer).start();
-                        }
-                        else{
+                        } else {
                             errorMsg.setText("Any of the Fields cannot be empty");
                             errorMsg.setForeground(Color.RED);
                             errorMsg.setToolTipText("Fields should be filled with correct infos");
@@ -178,10 +179,11 @@ public class Login {
                             };
                             new javax.swing.Timer(delay, taskPerformer).start();
                         }
-                    }else {
+                    } else {
                         errorMsg.setText("Invalid Authentication ! Try Again");
                         errorMsg.setForeground(Color.RED);
-                        errorMsg.setToolTipText("This is an error message. Please input correct username and password to login");
+                        errorMsg.setToolTipText(
+                                "This is an error message. Please input correct username and password to login");
                         loginPanel.repaint();
 
                         int delay = 4000; // milliseconds
@@ -196,20 +198,22 @@ public class Login {
                 }
             }
             // else{
-            //     JOptionPane.showConfirmDialog(Home.frame, "Fatal Error ! Something went wrong", "Unknown Error", JOptionPane.ERROR_MESSAGE);
+            // JOptionPane.showConfirmDialog(Home.frame, "Fatal Error ! Something went
+            // wrong", "Unknown Error", JOptionPane.ERROR_MESSAGE);
             // }
         }
-        // if (username.equals(registeredUsernames.get(0)) && password.equals(registeredPasswords.get(0))) {
-        //     welcomeMsg();
+        // if (username.equals(registeredUsernames.get(0)) &&
+        // password.equals(registeredPasswords.get(0))) {
+        // welcomeMsg();
         // }
         // else
         // {
-        //     notAllowedMsg();
+        // notAllowedMsg();
         // }
     }
 
-    void backHover(){
-        back.addMouseListener(new MouseListener(){
+    void backHover() {
+        back.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent arg0) {
@@ -240,16 +244,17 @@ public class Login {
                 back.setForeground(Color.BLACK);
 
             }
-            
+
         });
     }
-    void submitEnterPressAction(){
+
+    void submitEnterPressAction() {
         loginPanel.getRootPane().setDefaultButton(submit);
-        submit.addActionListener(new ActionListener(){
+        submit.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-               authenticator();
+                authenticator();
             }
 
         });

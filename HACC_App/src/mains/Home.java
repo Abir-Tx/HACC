@@ -56,7 +56,7 @@ public class Home extends JFrame {
         exitAction(); // Exit button functionality
         loginAction(); // Login button functionality
 
-        //Log Adder
+        // Log Adder
         try {
             logCreator();
         } catch (IOException e) {

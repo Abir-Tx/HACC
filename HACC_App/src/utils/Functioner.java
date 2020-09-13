@@ -14,7 +14,6 @@ public class Functioner extends DesignUtils {
     public File file = new File("HACC_App/src/Log.txt");
     public java.util.Date date = new java.util.Date();
 
-
     public void onOffWriter(JButton on, JButton off, String device) {
         on.addActionListener(new ActionListener() {
 

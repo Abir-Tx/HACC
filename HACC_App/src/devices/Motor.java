@@ -1,6 +1,5 @@
 package devices;
 
-
 import utils.*;
 import mains.Home;
 import lib.DesignUtils;
@@ -25,7 +24,8 @@ public class Motor extends Functioner {
         Home.frame.add(bodyPanel);
 
         designer.headerCreator("Motor", header, headerPanel); // designing the header and creating the header
-        designer.bodyPanelCreatorWithBackButton(bodyPanel, back); // Creating and designing the body panel and setting the back button
+        designer.bodyPanelCreatorWithBackButton(bodyPanel, back); // Creating and designing the body panel and setting
+                                                                  // the back button
 
         designer.onOffButtonCreator(on, off);
 

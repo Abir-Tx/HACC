@@ -1,6 +1,5 @@
 package mains;
 
-
 import devices.*;
 
 import java.awt.event.*;
@@ -24,7 +23,7 @@ public class ContCent {
     JRadioButton advance = new JRadioButton();
     JButton settings = new JButton();
 
-    public ContCent(){
+    public ContCent() {
         Home.frame.add(contPanelWindow);
         Home.frame.add(headerpanel);
 
@@ -32,10 +31,10 @@ public class ContCent {
         contPanelWindow.setBackground(Color.LIGHT_GRAY);
         contPanelWindow.setBounds(0, 200, 1100, 400);
 
-        //Header creator 
-        headerDesigner.headerCreator("HAC Center", headerLabel,headerpanel);
+        // Header creator
+        headerDesigner.headerCreator("HAC Center", headerLabel, headerpanel);
 
-        //Button configs
+        // Button configs
         light.setText("Light");
         light.setBounds(50, 30, 300, 30);
 
@@ -50,7 +49,7 @@ public class ContCent {
 
         motor = new JButton();
         motor.setText("Motor");
-        motor.setBounds(400, 100, 300,30);
+        motor.setBounds(400, 100, 300, 30);
 
         pc = new JButton();
         pc.setText("PC");
@@ -59,19 +58,18 @@ public class ContCent {
         back.setText("Go Back");
         back.setBounds(50, 300, 120, 50);
 
-        //Radio button configs
-        basic.setBounds(880,300,80,50);
+        // Radio button configs
+        basic.setBounds(880, 300, 80, 50);
         basic.setText("Basic");
         basic.setSelected(true);
         basic.setBackground(Color.LIGHT_GRAY);
 
-        advance.setBounds(960,300,100,50);
+        advance.setBounds(960, 300, 100, 50);
         advance.setText("Advanced");
         advance.setSelected(false);
         advance.setBackground(Color.LIGHT_GRAY);
 
-
-        //Adding components
+        // Adding components
         contPanelWindow.add(light);
         contPanelWindow.add(fan);
         contPanelWindow.add(tv);
@@ -85,11 +83,11 @@ public class ContCent {
 
         headerpanel.add(headerLabel);
 
-        //Adding the Action Listener for radio buttons
+        // Adding the Action Listener for radio buttons
         advanceAction();
         basicAction();
 
-        light.addMouseListener(new MouseListener(){
+        light.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -115,10 +113,10 @@ public class ContCent {
             public void mouseExited(MouseEvent e) {
 
             }
-            
+
         });
-        
-        fan.addMouseListener(new MouseListener(){
+
+        fan.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -144,10 +142,10 @@ public class ContCent {
             public void mouseExited(MouseEvent e) {
 
             }
-            
+
         });
-        
-        tv.addMouseListener(new MouseListener(){
+
+        tv.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent arg0) {
@@ -175,13 +173,13 @@ public class ContCent {
             }
 
         });
-        
-        speaker.addMouseListener(new MouseListener(){
+
+        speaker.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent arg0) {
                 new Speaker();
-            }   
+            }
 
             @Override
             public void mouseEntered(MouseEvent arg0) {
@@ -203,7 +201,7 @@ public class ContCent {
 
             }
         });
-        motor.addMouseListener(new MouseListener(){
+        motor.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent arg0) {
@@ -231,8 +229,8 @@ public class ContCent {
             }
 
         });
-        
-        pc.addMouseListener(new MouseListener(){
+
+        pc.addMouseListener(new MouseListener() {
 
             @Override
             public void mouseClicked(MouseEvent arg0) {
@@ -261,7 +259,7 @@ public class ContCent {
 
         });
 
-        back.addActionListener(new ActionListener(){
+        back.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent arg0) {
@@ -272,7 +270,7 @@ public class ContCent {
 
         });
 
-        settings.addActionListener(new ActionListener(){
+        settings.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -281,29 +279,30 @@ public class ContCent {
 
         });
     }
-    private void advanceAction(){
-        advance.addActionListener(new ActionListener(){
+
+    private void advanceAction() {
+        advance.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 if (advance.isSelected() == true) {
                     settings.setText("Settings");
-                    settings.setBounds(50,170,300,30);
+                    settings.setBounds(50, 170, 300, 30);
                     settings.setVisible(true);
 
                     basic.setSelected(false);
-                }
-                else if(advance.isSelected()==false){
+                } else if (advance.isSelected() == false) {
                     settings.setVisible(false);
                 }
             }
         });
     }
-    private void basicAction(){
-        basic.addActionListener(new ActionListener(){
+
+    private void basicAction() {
+        basic.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                if(basic.isSelected() == true){
+                if (basic.isSelected() == true) {
                     advance.setSelected(false);
                     settings.setVisible(false);
                 }
@@ -311,5 +310,5 @@ public class ContCent {
 
         });
     }
-    
+
 }

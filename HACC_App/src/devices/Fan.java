@@ -18,14 +18,15 @@ public class Fan extends Functioner {
     JPanel bodyPanel = new JPanel();
     JButton on = new JButton();
     JButton off = new JButton();
-    
-    public Fan(){
+
+    public Fan() {
         Home.frame.getContentPane().removeAll();
         Home.frame.add(headerPanel);
         Home.frame.add(bodyPanel);
 
         designer.headerCreator("Fan", header, headerPanel);
-        designer.bodyPanelCreatorWithBackButton(bodyPanel, back); // Creating and designing the body panel and setting the back button
+        designer.bodyPanelCreatorWithBackButton(bodyPanel, back); // Creating and designing the body panel and setting
+                                                                  // the back button
         designer.onOffButtonCreator(on, off);
 
         utils.backAction(back);

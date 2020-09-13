@@ -1,8 +1,5 @@
 package mains;
 
-
-
-
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -52,12 +49,11 @@ public class About {
         authorDescrip.setBounds(0, 80, 200, 50);
         authorDescrip.setBackground(Color.lightGray);
 
-        softDescrip.setText("\tThis is a demo program writtten in pure java."+
-        "\nThis program is a demo for a Home automation control center."+
-        "\nThe project is under MD. Nazmul Hossain Sir.");
-        softDescrip.setBounds(205, 50, 390,200);
+        softDescrip.setText("\tThis is a demo program writtten in pure java."
+                + "\nThis program is a demo for a Home automation control center."
+                + "\nThe project is under MD. Nazmul Hossain Sir.");
+        softDescrip.setBounds(205, 50, 390, 200);
         softDescrip.setEditable(false);
-
 
         sidebar.add(name);
         sidebar.add(title);
@@ -73,16 +69,14 @@ public class About {
             public void actionPerformed(ActionEvent e) {
                 aboutFrame.setVisible(false);
             }
-            
+
         });
 
         aboutFrame.add(sidebar);
         aboutFrame.add(ok);
         aboutFrame.add(softDescrip);
 
-
-
-        aboutFrame.repaint();  
+        aboutFrame.repaint();
 
     }
 }

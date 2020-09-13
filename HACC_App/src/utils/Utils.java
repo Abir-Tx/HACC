@@ -5,6 +5,7 @@ import mains.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 public class Utils {
     public void backAction(JButton back) {
         back.addActionListener(new ActionListener() {
@@ -14,10 +15,11 @@ public class Utils {
                 Home.frame.getContentPane().removeAll();
                 new ContCent();
                 Home.frame.repaint();
-            } 
+            }
         });
     }
-    public void onOffAction(JButton on, JButton off){
+
+    public void onOffAction(JButton on, JButton off) {
         DesignUtils designer = new DesignUtils();
 
         on.addActionListener(new ActionListener() {
@@ -29,9 +31,9 @@ public class Utils {
             }
         });
 
-        off.addActionListener(new ActionListener(){
+        off.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 designer.defBtnColor(on);
                 off.setBackground(java.awt.Color.BLUE);
             }

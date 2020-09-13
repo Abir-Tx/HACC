@@ -67,33 +67,33 @@ public class Pc extends Functioner {
                     sleep.setBackground(Color.GRAY);
                     // sleep.setForeground(Color.WHITE);
                     try {
-                        BufferedWriter logger = new BufferedWriter(new FileWriter(file,true));
-                        logger.append("The PC has been put to sleep by User at "+date);
+                        BufferedWriter logger = new BufferedWriter(new FileWriter(file, true));
+                        logger.append("The PC has been put to sleep by User at " + date);
                         logger.newLine();
                         logger.close();
                     } catch (IOException e1) {
                         e1.printStackTrace();
                     }
                 }
-                
-                else{
+
+                else {
                     defBtnColor(sleep);
                     JOptionPane.showMessageDialog(Home.frame, "Turn on the PC first to put to Sleep");
                 }
 
-			}
-            
+            }
+
         });
 
-        //Wake Button 
-        JButton wake =  new JButton("Wake");
+        // Wake Button
+        JButton wake = new JButton("Wake");
         wake.setToolTipText("Press to wake up the PC from sleep");
-        wake.setBounds(610, 100, 100,50);
+        wake.setBounds(610, 100, 100, 50);
         BtnFontDesigner(wake);
-        
+
         bodyPanel.add(wake);
 
-        wake.addActionListener(new ActionListener(){
+        wake.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -102,8 +102,8 @@ public class Pc extends Functioner {
                     defBtnColor(sleep);
                     JOptionPane.showMessageDialog(Home.frame, "The PC has been woke up");
                     try {
-                        BufferedWriter logger = new BufferedWriter(new FileWriter(file,true));
-                        logger.append("The PC has been woke up by the User at "+ date);
+                        BufferedWriter logger = new BufferedWriter(new FileWriter(file, true));
+                        logger.append("The PC has been woke up by the User at " + date);
                         logger.newLine();
                         logger.close();
                     } catch (Exception wake) {
