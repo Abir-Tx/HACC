@@ -5,11 +5,30 @@ import java.util.ArrayList;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 import java.awt.event.ActionListener;
 
 
 public class Admin extends Login {
     Admin(){};   //Def cons
+
+    @Override
+    protected void usernameConfig() {
+        label1 = new JLabel("Admin Username");
+        field1 = new JTextField(15);
+        label1.setBounds(10, 180, 200, 40);
+        field1.setBounds(10, 220, 250, 30);
+    }
+
+    @Override
+    void headerConfig(){
+        // Header
+        label3 = new JLabel("HACC Admin Login");
+        label3.setBounds(50, 5, 250, 30);
+        label3.setFont(new Font("Times New Roman", Font.BOLD, 20));
+        label3.setForeground(java.awt.Color.BLUE);
+    }
 
     @Override
     void authenticator(){
