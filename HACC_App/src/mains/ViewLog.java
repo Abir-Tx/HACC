@@ -5,12 +5,15 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import utils.Functioner;
 
-public class ViewLog extends Functioner {   
+public class ViewLog extends Functioner {  
+    JFrame f = new JFrame();
+    JScrollPane logScroll = new JScrollPane();
+
     ViewLog() {
-        JFrame f = new JFrame();
         f.setTitle("HACC Log");
         f.setSize(new Dimension(800 , 400));
         f.setResizable(true);
@@ -20,11 +23,14 @@ public class ViewLog extends Functioner {
         f.setFocusableWindowState(true);
         f.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         JTextArea ta = new JTextArea();
-        f.add(ta);
+        logScroll.setViewportView(ta);
+        f.add(logScroll);
+        f.pack();
+        // f.add(ta);
 
         f.setVisible(true);
 
-        
+
         try {
             BufferedReader logReader = new BufferedReader(new FileReader(file));
             String logHolder;
