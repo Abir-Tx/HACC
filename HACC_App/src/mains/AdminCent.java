@@ -7,8 +7,11 @@ import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JButton;
@@ -23,6 +26,7 @@ public class AdminCent extends Functioner {
     JButton startLogging = new JButton();
     JLabel logDate = new JLabel();
     JButton goto_HACC = new JButton();
+    JButton viewLog = new JButton();
 
     AdminCent() {
         Home.frame.add(contPanelWindow);
@@ -32,8 +36,8 @@ public class AdminCent extends Functioner {
         contPanelWindow.setBackground(java.awt.Color.LIGHT_GRAY);
         contPanelWindow.setBounds(0, 200, 1100, 400);
 
-        logDate.setText("Log time: "+date);
-        logDate.setBounds(400,150,300,30);
+        logDate.setText("Log time: " + date);
+        logDate.setBounds(420, 150, 300, 30);
         logDate.setForeground(Color.BLUE);
 
         headerCreator("Admin Control Center", headerLabel, headerpanel);
@@ -50,6 +54,9 @@ public class AdminCent extends Functioner {
         goto_HACC.setText("Go To Control Center");
         goto_HACC.setBounds(400, 170, 300, 50);
 
+        viewLog.setText("View Log");
+        viewLog.setBounds(400, 240, 300, 50);
+
         back.setText("Go Back");
         back.setBounds(15, 300, 120, 50);
 
@@ -58,12 +65,34 @@ public class AdminCent extends Functioner {
         startLoggingAction();
         backAction();
         goto_HACCAction();
+        viewLogAction();
 
         // Adding to main content panel
         contPanelWindow.add(delLog);
         contPanelWindow.add(startLogging);
         contPanelWindow.add(back);
         contPanelWindow.add(goto_HACC);
+        contPanelWindow.add(viewLog);
+
+    }
+
+    private void viewLogAction() {
+        viewLog.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    BufferedReader logReader = new BufferedReader(new FileReader(file));
+                    String logHolder;
+                    while ((logHolder = logReader.readLine()) != null) {
+                        System.out.println(logHolder);
+                    }
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+
+        });
     }
 
     private void delLogAction() {
