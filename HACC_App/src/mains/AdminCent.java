@@ -86,27 +86,8 @@ public class AdminCent extends Functioner {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    BufferedReader logReader = new BufferedReader(new FileReader(file));
-                    String logHolder;
-                    JFrame                 f= new JFrame("TEST");
-                        f.setVisible(true);
-                        f.setSize(new Dimension(500,500));
-                        // f.setLayout(null);
-                        f.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-                        JTextArea tf = new JTextArea();
-                        // tf.setBounds(0,0,500,500);
-                    while ((logHolder = logReader.readLine()) != null) {
-                        
-                        tf.append(logHolder+"\n");
-                        
-                    }
-                    f.add(tf);
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
+                new ViewLog();
             }
-
         });
     }
 
