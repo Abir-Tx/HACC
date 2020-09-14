@@ -3,22 +3,14 @@ package mains;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 
 import utils.Functioner;
 
@@ -165,8 +157,8 @@ public class AdminCent extends Functioner {
         });
     }
 
-    void goto_HACCAction(){
-        goto_HACC.addActionListener(new ActionListener(){
+    void goto_HACCAction() {
+        goto_HACC.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
