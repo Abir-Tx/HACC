@@ -29,9 +29,10 @@ public class ViewLog extends Functioner {
         ta.setEditable(false);
         ta.setBackground(Color.GRAY);
         ta.setForeground(Color.BLACK);
-        ta.setFont(new Font("Times New Roman",Font.BOLD,12));
+        ta.setFont(new Font("Times New Roman",Font.BOLD,14));
 
         logScroll.setViewportView(ta);
+
         f.add(logScroll);
         f.pack();
         // f.add(ta);
