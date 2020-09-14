@@ -45,7 +45,7 @@ public class AdminCent extends Functioner {
         delLog.setText("Delete Log");
         delLog.setBounds(400, 30, 300, 50);
 
-        startLogging.setText("Start Logging");
+        startLogging.setText("Start New Logging");
         startLogging.setBounds(400, 100, 300, 50);
 
         goto_HACC.setText("Go To Control Center");
