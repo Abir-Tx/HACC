@@ -4,13 +4,13 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import javax.swing.JButton;
 import utils.Functioner;
 
@@ -21,6 +21,7 @@ public class AdminCent extends Functioner {
     JButton delLog = new JButton();
     JButton back = new JButton();
     JButton startLogging = new JButton();
+    JLabel logDate = new JLabel();
 
     AdminCent() {
         Home.frame.add(contPanelWindow);
@@ -30,8 +31,13 @@ public class AdminCent extends Functioner {
         contPanelWindow.setBackground(java.awt.Color.LIGHT_GRAY);
         contPanelWindow.setBounds(0, 200, 1100, 400);
 
+        logDate.setText("Log time: "+date);
+        logDate.setBounds(400,150,300,30);
+        logDate.setForeground(Color.BLUE);
+
         headerCreator("Admin Control Center", headerLabel, headerpanel);
         headerpanel.add(headerLabel);
+        headerpanel.add(logDate);
 
         // Button configs
         delLog.setText("Delete Log");
