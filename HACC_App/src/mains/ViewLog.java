@@ -1,6 +1,8 @@
 package mains;
 
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -22,7 +24,13 @@ public class ViewLog extends Functioner {
         f.setMinimumSize(new Dimension(600, 400));
         f.setFocusableWindowState(true);
         f.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+
         JTextArea ta = new JTextArea();
+        ta.setEditable(false);
+        ta.setBackground(Color.GRAY);
+        ta.setForeground(Color.BLACK);
+        ta.setFont(new Font("Times New Roman",Font.BOLD,12));
+
         logScroll.setViewportView(ta);
         f.add(logScroll);
         f.pack();
