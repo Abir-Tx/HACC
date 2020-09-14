@@ -3,8 +3,11 @@ package mains;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -15,6 +18,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+
 import utils.Functioner;
 
 public class AdminCent extends Functioner {
@@ -84,9 +89,19 @@ public class AdminCent extends Functioner {
                 try {
                     BufferedReader logReader = new BufferedReader(new FileReader(file));
                     String logHolder;
+                    JFrame                 f= new JFrame("TEST");
+                        f.setVisible(true);
+                        f.setSize(new Dimension(500,500));
+                        // f.setLayout(null);
+                        f.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+                        JTextArea tf = new JTextArea();
+                        // tf.setBounds(0,0,500,500);
                     while ((logHolder = logReader.readLine()) != null) {
-                        System.out.println(logHolder);
+                        
+                        tf.append(logHolder+"\n");
+                        
                     }
+                    f.add(tf);
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
