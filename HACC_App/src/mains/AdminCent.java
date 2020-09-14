@@ -22,6 +22,7 @@ public class AdminCent extends Functioner {
     JButton back = new JButton();
     JButton startLogging = new JButton();
     JLabel logDate = new JLabel();
+    JButton goto_HACC = new JButton();
 
     AdminCent() {
         Home.frame.add(contPanelWindow);
@@ -46,6 +47,9 @@ public class AdminCent extends Functioner {
         startLogging.setText("Start Logging");
         startLogging.setBounds(400, 100, 300, 50);
 
+        goto_HACC.setText("Go To Control Center");
+        goto_HACC.setBounds(400, 170, 300, 50);
+
         back.setText("Go Back");
         back.setBounds(15, 300, 120, 50);
 
@@ -53,11 +57,13 @@ public class AdminCent extends Functioner {
         delLogAction();
         startLoggingAction();
         backAction();
+        goto_HACCAction();
 
         // Adding to main content panel
         contPanelWindow.add(delLog);
         contPanelWindow.add(startLogging);
         contPanelWindow.add(back);
+        contPanelWindow.add(goto_HACC);
     }
 
     private void delLogAction() {
@@ -128,6 +134,19 @@ public class AdminCent extends Functioner {
             public void actionPerformed(ActionEvent arg0) {
                 Home.frame.getContentPane().removeAll();
                 new Admin();
+                Home.frame.repaint();
+            }
+
+        });
+    }
+
+    void goto_HACCAction(){
+        goto_HACC.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Home.frame.getContentPane().removeAll();
+                new ContCent();
                 Home.frame.repaint();
             }
 
