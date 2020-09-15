@@ -1,8 +1,12 @@
 package mains;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Settings extends JFrame {
@@ -29,11 +33,21 @@ public class Settings extends JFrame {
 
         viewLog.setText("View Log");
         viewLog.setBounds(550, 30, 100, 30);
+        viewLogAction();
 
         mainPanel.add(viewLog);
 
         add(mainPanel);
         add(headerPanel);
+    }
+
+    protected void viewLogAction() {
+        viewLog.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(mainPanel, "This section is under developement !!");
+            }
+        });
     }
 
     public static void main(String[] args) {
