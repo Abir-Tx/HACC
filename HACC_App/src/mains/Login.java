@@ -28,10 +28,7 @@ public class Login {
         loginPanel.setVisible(true);
 
         // Username:
-        label1 = new JLabel("Username");
-        field1 = new JTextField(15);
-        label1.setBounds(10, 180, 200, 40);
-        field1.setBounds(10, 220, 250, 30);
+        usernameConfig();
 
         // Password:
         label2 = new JLabel("Password");
@@ -49,11 +46,8 @@ public class Login {
         back.setBounds(140, 350, 120, 40);
         Home.designer.BtnFontDesigner(back);
 
-        // Header
-        label3 = new JLabel("HACC Login");
-        label3.setBounds(50, 5, 250, 30);
-        label3.setFont(new Font("Times New Roman", Font.BOLD, 20));
-        label3.setForeground(Color.BLUE);
+        //Header 
+        headerConfig();
 
         // Adding components:
         loginPanel.add(label1);
@@ -69,6 +63,20 @@ public class Login {
         // submitAction();
         submitEnterPressAction();
 
+    }
+
+    protected void usernameConfig() {
+        label1 = new JLabel("Username");
+        field1 = new JTextField(15);
+        label1.setBounds(10, 180, 200, 40);
+        field1.setBounds(10, 220, 250, 30);
+    }
+
+    void headerConfig() {
+        label3 = new JLabel("HACC User Login");
+        label3.setBounds(50, 5, 250, 30);
+        label3.setFont(new Font("Times New Roman", Font.BOLD, 20));
+        label3.setForeground(Color.BLUE);
     }
 
     void welcomeMsg() {

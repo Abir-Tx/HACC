@@ -9,7 +9,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -22,6 +21,7 @@ public class Home extends JFrame {
     JButton login = new JButton();
     JButton exit = new JButton();
     JButton about = new JButton();
+    JButton admin = new JButton();
 
     public static DesignUtils designer = new DesignUtils(); // Static object which will be used in other classes too
 
@@ -52,17 +52,13 @@ public class Home extends JFrame {
         aboutConfig();
         aboutHover();
 
+        //Admin Button
+        adminConfig();
+        adminHover();
+
         // Button Functionality
         exitAction(); // Exit button functionality
         loginAction(); // Login button functionality
-
-        // Log Adder
-        try {
-            logCreator();
-        } catch (IOException e) {
-            System.out.println("Error Log file not Created");
-        }
-
     }
 
     void loginConfig() {
@@ -106,6 +102,19 @@ public class Home extends JFrame {
 
         designer.BtnFontDesigner(about);
 
+    }
+
+    void adminConfig(){
+        admin.setBounds(940, 170, 150, 40);
+        admin.setText("Admin");
+        admin.setContentAreaFilled(true);
+        admin.setEnabled(true);
+        admin.setFocusPainted(true);
+        admin.setFocusable(true);
+        admin.setToolTipText("Press to go to the admin panel");
+
+        //Button Design
+        designer.BtnFontDesigner(admin);
     }
 
     void loginHover() {
@@ -217,6 +226,37 @@ public class Home extends JFrame {
         });
     }
 
+    void adminHover(){
+        admin.addMouseListener(new MouseListener(){
+            @Override
+            public void mouseClicked(MouseEvent arg0) {
+                Home.frame.getContentPane().removeAll();
+                new Admin();
+                Home.frame.repaint();
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent arg0) {
+                admin.setBackground(Color.LIGHT_GRAY);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent arg0) {
+                designer.defBtnColor(admin);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent arg0) {
+                admin.setForeground(Color.BLUE);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent arg0) {
+                admin.setForeground(Color.BLACK);
+            }
+        });
+    }
+
     void exitAction() { // The exit button actions defined here
         exit.addActionListener(new ActionListener() {
 
@@ -227,6 +267,7 @@ public class Home extends JFrame {
                 int userAnswer;
                 userAnswer = JOptionPane.showConfirmDialog(frame, "Are you sure ?");
                 if (userAnswer == JOptionPane.YES_OPTION) {
+                    System.out.println("Exiting the program......\nThanks for using the program\nFrom: Mushfiqur Rahman Abir");
                     System.exit(0); // Exits the program
                 } else if (userAnswer == JOptionPane.NO_OPTION) {
                     JOptionPane.showMessageDialog(frame, "You opted for using this program more",
@@ -260,16 +301,6 @@ public class Home extends JFrame {
         frame.add(login);
         frame.add(exit);
         frame.add(about);
-    }
-
-    void logCreator() throws IOException {
-        File log = new File("HACC_App/src/Log.txt");
-        BufferedWriter writer = new BufferedWriter(new FileWriter(log));
-
-        writer.write("\t\t\t------LOG SYSTEM OF HACC------");
-        writer.newLine();
-        writer.newLine();
-        writer.flush();
-        writer.close();
+        frame.add(admin);
     }
 }
