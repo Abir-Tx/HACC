@@ -27,6 +27,7 @@ public class About {
         aboutFrame.setLayout(null);
         aboutFrame.setResizable(false);
         aboutFrame.setTitle("About");
+        aboutFrame.setLocationRelativeTo(Home.frame);
         aboutFrame.setBackground(Color.WHITE);
 
         sidebar.setLayout(null);
@@ -41,7 +42,7 @@ public class About {
 
         name = new JLabel();
         name.setText("Mushfiqur Rahman Abir");
-        name.setBounds(20, 40, 200, 30);
+        name.setBounds(30, 40, 200, 30);
 
         authorDescrip.setText("            Student at AIUB\n                    Java");
         authorDescrip.setEditable(false);
@@ -76,6 +77,7 @@ public class About {
         aboutFrame.add(ok);
         aboutFrame.add(softDescrip);
 
+        aboutFrame.setVisible(true);
         aboutFrame.repaint();
 
     }
