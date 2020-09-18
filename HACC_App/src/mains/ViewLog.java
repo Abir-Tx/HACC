@@ -23,6 +23,7 @@ public class ViewLog extends Functioner {
         f.setFocusable(true);
         f.setMinimumSize(new Dimension(600, 400));
         f.setFocusableWindowState(true);
+        f.setAlwaysOnTop(true);
         f.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
         JTextArea ta = new JTextArea();

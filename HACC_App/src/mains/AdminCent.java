@@ -95,6 +95,7 @@ public class AdminCent extends Functioner {
                     if (file.exists() == true) {
                         file.delete();
                         JOptionPane.showMessageDialog(Home.frame, "The log file has been deleted successfully");
+                        System.out.println("The log file has been deleted");
                     } else {
                         JOptionPane.showMessageDialog(Home.frame, "File Not Found", "Log File Missing",
                                 JOptionPane.ERROR_MESSAGE);
@@ -118,6 +119,7 @@ public class AdminCent extends Functioner {
                 if (userChoice == 0) {
                     try {
                         logCreator();
+                        System.out.println("A new log file has been created to the 'src' folder");
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }
