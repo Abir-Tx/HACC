@@ -1,8 +1,11 @@
-package source.mains;
+package res.mains;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
+import res.utils.Functioner;
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,8 +14,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JButton;
-
-import source.utils.Functioner;
 
 public class AdminCent extends Functioner {
     JLabel headerLabel = new JLabel();
@@ -135,7 +136,7 @@ public class AdminCent extends Functioner {
     }
 
     void logCreator() throws IOException {
-        File log = new File("HACC_App/src/Log.txt");
+        File log = new File("HACC_App/src/data/Log.dat");
         BufferedWriter writer = new BufferedWriter(new FileWriter(log));
 
         writer.write("\t\t\t------LOG SYSTEM OF HACC------");

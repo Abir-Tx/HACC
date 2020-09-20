@@ -1,11 +1,10 @@
-package source.mains;
-
-import source.devices.*;
+package res.mains;
 
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 import lib.DesignUtils;
+import res.devices.*;
 
 public class ContCent {
     JFrame frame = new JFrame();

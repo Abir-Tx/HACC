@@ -1,4 +1,4 @@
-package source.utils;
+package res.utils;
 
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -11,7 +11,7 @@ import javax.swing.JButton;
 import lib.DesignUtils;
 
 public class Functioner extends DesignUtils {
-    public File file = new File("HACC_App/src/Log.txt");
+    public File file = new File("HACC_App/src/data/Log.dat");
     public java.util.Date date = new java.util.Date();
 
     public void onOffWriter(JButton on, JButton off, String device) {

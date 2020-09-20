@@ -1,7 +1,4 @@
-package source.devices;
-
-import source.utils.*;
-import source.mains.Home;
+package res.devices;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -16,6 +13,8 @@ import java.io.IOException;
 import javax.swing.JButton;
 
 import lib.DesignUtils;
+import res.mains.Home;
+import res.utils.*;
 
 public class Light extends Functioner {
     DesignUtils designer = new DesignUtils();

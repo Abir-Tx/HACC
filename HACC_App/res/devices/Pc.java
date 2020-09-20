@@ -1,8 +1,8 @@
-package source.devices;
+package res.devices;
 
-import source.utils.*;
-import source.mains.Home;
 import lib.DesignUtils;
+import res.mains.Home;
+import res.utils.*;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;

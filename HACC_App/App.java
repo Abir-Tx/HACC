@@ -1,4 +1,4 @@
-import source.mains.Home;
+import res.mains.Home;
 
 public class App {
     public static void main(String[] args) throws Exception {

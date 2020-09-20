@@ -1,13 +1,12 @@
-package source.devices;
-
-import source.utils.*;
-import source.mains.Home;
+package res.devices;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 
 import lib.DesignUtils;
+import res.mains.Home;
+import res.utils.*;
 
 public class Fan extends Functioner {
     DesignUtils designer = new DesignUtils();
