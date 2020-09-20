@@ -40,4 +40,16 @@ public class Utils {
             }
         });
     }
+
+    public static void consoleAnim(int length, String animChar, int time) {
+        for (int i = 0; i < length; i++) {
+            System.out.print(animChar);
+            try {
+                Thread.sleep(time);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("\n\n");
+    }
 }
