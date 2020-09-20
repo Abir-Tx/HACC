@@ -1,4 +1,4 @@
-package mains;
+package source.mains;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -12,7 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JButton;
 
-import utils.Functioner;
+import source.utils.Functioner;
 
 public class AdminCent extends Functioner {
     JLabel headerLabel = new JLabel();

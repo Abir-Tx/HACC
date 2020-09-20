@@ -1,7 +1,7 @@
-package utils;
+package source.utils;
 
 import lib.*;
-import mains.*;
+import source.mains.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

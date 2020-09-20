@@ -1,7 +1,7 @@
-package devices;
+package source.devices;
 
-import utils.*;
-import mains.Home;
+import source.utils.*;
+import source.mains.Home;
 import lib.DesignUtils;
 
 import javax.swing.JLabel;

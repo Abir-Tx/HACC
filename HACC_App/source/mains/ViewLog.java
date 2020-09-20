@@ -1,4 +1,4 @@
-package mains;
+package source.mains;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import utils.Functioner;
+import source.utils.Functioner;
 
 public class ViewLog extends Functioner {  
     JFrame f = new JFrame();

@@ -1,6 +1,6 @@
-package mains;
+package source.mains;
 
-import devices.*;
+import source.devices.*;
 
 import java.awt.event.*;
 import javax.swing.*;

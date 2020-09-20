@@ -1,24 +1,23 @@
-package devices;
+package source.devices;
 
-import utils.*;
-import mains.Home;
+import source.utils.*;
+import source.mains.Home;
 import lib.DesignUtils;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
 
-public class TV extends Functioner {
+public class Speaker extends Functioner {
     static int volumeLevel = 0;
-
     DesignUtils designer = new DesignUtils();
     Utils utils = new Utils();
     JLabel header = new JLabel();
@@ -28,12 +27,12 @@ public class TV extends Functioner {
     JButton on = new JButton();
     JButton off = new JButton();
 
-    public TV() {
+    public Speaker() {
         Home.frame.getContentPane().removeAll();
         Home.frame.add(headerPanel);
         Home.frame.add(bodyPanel);
 
-        designer.headerCreator("Smart TV", header, headerPanel); // designing the header and creating the header
+        designer.headerCreator("Smart Spaker", header, headerPanel); // designing the header and creating the header
         designer.bodyPanelCreatorWithBackButton(bodyPanel, back); // Creating and designing the body panel and setting
                                                                   // the back button
 
@@ -41,7 +40,7 @@ public class TV extends Functioner {
 
         utils.backAction(back);
         utils.onOffAction(on, off);
-        onOffWriter(on, off, "Smart TV");
+        onOffWriter(on, off, "Smart Speaker");
 
         volumeConfig();
 
@@ -75,9 +74,9 @@ public class TV extends Functioner {
                         info.setBounds(0, 0, 300, 200);
                         bodyPanel.add(info);
                     } else {
-                        volumeLevel++;
+                        volumeLevel += 5;
                         logger = new BufferedWriter(new FileWriter(file, true));
-                        logger.append("Volume increated to " + volumeLevel + " By User at " + date);
+                        logger.append("Speaker Volume increated to " + volumeLevel + " By User at " + date);
                         logger.newLine();
                         logger.close();
                     }
@@ -102,9 +101,9 @@ public class TV extends Functioner {
                         info.setBounds(0, 0, 300, 200);
                         bodyPanel.add(info);
                     } else {
-                        volumeLevel--;
+                        volumeLevel -= 5;
                         logger = new BufferedWriter(new FileWriter(file, true));
-                        logger.append("Volume decreased to " + volumeLevel + " By User at " + date);
+                        logger.append("Speaker Volume decreased to " + volumeLevel + " By User at " + date);
                         logger.newLine();
                         logger.close();
                     }
