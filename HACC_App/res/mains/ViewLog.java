@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
@@ -46,13 +47,17 @@ public class ViewLog extends Functioner {
             BufferedReader logReader = new BufferedReader(new FileReader(file));
             String logHolder;
             
-            while ((logHolder = logReader.readLine()) != null) {
-                ta.append(logHolder + "\n");
-            }
-            System.out.println("Printed the log to the new Frame");   //This is for console tracing
-            logReader.close();
+                while ((logHolder = logReader.readLine()) != null) {
+                    ta.append(logHolder + "\n");
+                }
+                System.out.println("Printed the log to the new Frame");   //This is for console tracing
+                logReader.close();            
         } catch (IOException e1) {
-            e1.printStackTrace();
+            // e1.printStackTrace();
+            System.out.println("ERROR: Logging is not on ! No Log file found");
+            f.setVisible(false);
+            JOptionPane.showMessageDialog(Home.frame, "Logging is off ! Turn on logging first to view it");
+
         }
     }
 }
