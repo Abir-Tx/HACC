@@ -283,7 +283,7 @@ public class Home extends JFrame {
                 frame.getContentPane().removeAll(); // Removes everything from the current window/frame
                 // frame.revalidate();
                 frame.repaint(); // Updates the Frame windows live
-
+                
                 // Second Panel
                 new Login();
 

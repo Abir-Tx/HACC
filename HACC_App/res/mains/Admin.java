@@ -54,6 +54,8 @@ public class Admin extends Login {
                 welcomeMsg();
                 Home.frame.getContentPane().removeAll();
                 Home.frame.repaint();
+                //Console log:
+                System.out.println("Admin Authentication Successful\n\n");
                 new AdminCent(); // creating the Admin control center
                 Home.frame.validate();
                 break;
