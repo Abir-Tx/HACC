@@ -146,6 +146,8 @@ public class Login {
                 welcomeMsg();
                 Home.frame.getContentPane().removeAll();
                 Home.frame.repaint();
+                //Console log:
+                System.out.println("Authentication Successful\n\n");
                 new ContCent(); // creating the control center
                 Home.frame.validate();
                 break;
