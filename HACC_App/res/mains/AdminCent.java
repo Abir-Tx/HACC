@@ -136,7 +136,7 @@ public class AdminCent extends Functioner {
     }
 
     void logCreator() throws IOException {
-        File log = new File("HACC_App/src/Log.dat");
+        File log = new File("HACC_App//src//Log.dat");
         BufferedWriter writer = new BufferedWriter(new FileWriter(log));
 
         writer.write("\t\t\t------LOG SYSTEM OF HACC------");
