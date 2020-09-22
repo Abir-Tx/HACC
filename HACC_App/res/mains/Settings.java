@@ -17,6 +17,9 @@ public class Settings extends JFrame {
     JPanel mainPanel = new JPanel();
     JButton totalUser = new JButton();
     JLabel headerLabel = new JLabel();
+    JButton hideDevices = new JButton();
+    JButton showDevices = new JButton();
+
 
     Settings() {
         this.setTitle("Settings");
@@ -43,14 +46,48 @@ public class Settings extends JFrame {
         mainPanel.setBackground(Color.LIGHT_GRAY);
 
         totalUser.setText("View Log");
-        totalUser.setBounds(550, 30, 100, 30);
-        totalUserAction();
+        totalUser.setBounds(550, 30, 100, 50);
 
+        hideDevices.setText("Hide Light");
+        hideDevices.setBounds(550, 100, 100, 50 );
+
+        showDevices.setText("Show Devices");
+        showDevices.setBounds(550, 170, 100, 50);
+
+        //Button action
+        totalUserAction();
+        hideDevicesAction();
+        showDevicesAction();
+
+        //Adding buttons to the panel
         mainPanel.add(totalUser);
+        mainPanel.add(hideDevices);
+        mainPanel.add(showDevices);
 
         add(mainPanel);
         add(headerLabel);
         add(headerPanel);
+    }
+
+    private void showDevicesAction() {
+        showDevices.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ContCent.light.setVisible(true);
+            }
+        });
+    }
+
+    private void hideDevicesAction() {
+        hideDevices.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ContCent.light.setVisible(false);
+            }
+
+        });
     }
 
     protected void totalUserAction() {

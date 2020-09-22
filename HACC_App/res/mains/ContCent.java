@@ -10,7 +10,7 @@ public class ContCent {
     JFrame frame = new JFrame();
     JPanel contPanelWindow = new JPanel(null);
     JPanel headerpanel = new JPanel(null);
-    JButton light = new JButton();
+    public static JButton light = new JButton();
     JButton fan = new JButton();
     JButton tv = new JButton();
     JButton motor, pc;
