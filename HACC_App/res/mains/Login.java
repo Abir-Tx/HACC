@@ -139,10 +139,11 @@ public class Login {
         final ArrayList<String> registeredPasswords = new ArrayList<String>();
         registeredPasswords.add("1234");
         registeredPasswords.add("12345");
-        registeredPasswords.add("0000");
+        registeredPasswords.add("0000"); */
 
-        for (int i = 0; i < registeredUsernames.toArray().length; i++) {
-            if (username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i))) {
+
+        for (int i = 0; i < Database.registeredUsernames.length; i++) {
+            if (username.equals(Database.registeredUsernames[i]) && password.equals(Database.registeredPasswords[i])) {
                 welcomeMsg();
                 Home.frame.getContentPane().removeAll();
                 Home.frame.repaint();
@@ -151,14 +152,14 @@ public class Login {
                 new ContCent(); // creating the control center
                 Home.frame.validate();
                 break;
-            } else if (!(username.equals(registeredUsernames.get(i)) && password.equals(registeredPasswords.get(i)))) {
-                if (username.equals(registeredUsernames.get(i)) && !password.equals(registeredPasswords.get(i))) {
+            } else if (!(username.equals(Database.registeredUsernames[i]) && password.equals(Database.registeredPasswords[i]))) {
+                if (username.equals(Database.registeredUsernames[i]) && !password.equals(Database.registeredPasswords[i])) {
                     JOptionPane.showMessageDialog(Home.frame, "Wrong Password ! Please recheck your Password");
-                } else if (!username.equals(registeredUsernames.get(i))
-                        && password.equals(registeredPasswords.get(i))) {
+                } else if (!username.equals(Database.registeredUsernames[i])
+                        && password.equals(Database.registeredPasswords[i])) {
                     JOptionPane.showMessageDialog(Home.frame, "Wrong Username ! Please recheck your Username");
-                } else if (!(username.equals(registeredUsernames.get(i)))
-                        && !(password.equals(registeredPasswords.get(i)))) {
+                } else if (!(username.equals(Database.registeredUsernames[i]))
+                        && !(password.equals(Database.registeredPasswords[i]))) {
                     if (username.length() == 0 || password.length() == 0) {
                         if (username.length() == 0 && password.length() == 0) {
                             errorMsg.setText("Both Fields cannot be empty");
