@@ -1,3 +1,11 @@
+/* ..............##########..............
+This is an AIUB java project under MD. Nazmul Hossain. 
+Project developed by: Mushfiqur Rahman Abir
+Base version: 1.0
+..................##########.............
+ */
+
+import res.mains.Database;
 import res.mains.Home;
 //TODO: Update the version number to 2.0 @Abir-Tx
 
