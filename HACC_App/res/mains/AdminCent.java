@@ -1,4 +1,5 @@
 package res.mains;
+
 import res.utils.Functioner;
 
 import javax.swing.JLabel;
@@ -120,7 +121,7 @@ public class AdminCent extends Functioner {
                 if (userChoice == 0) {
                     try {
                         logCreator();
-                        System.out.println("A new log file has been created to the 'src' folder");
+                        System.out.println("A new log file has been created to the 'HACC' folder");
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }
@@ -136,15 +137,23 @@ public class AdminCent extends Functioner {
     }
 
     void logCreator() throws IOException {
-        File log = new File("src/Log.dat");
-        BufferedWriter writer = new BufferedWriter(new FileWriter(log));
+        File log = new File("Log.dat");
 
-        writer.write("\t\t\t\t\t------LOG SYSTEM OF HACC------");
-        writer.newLine();
-        writer.newLine();
-        writer.write("\t\t\tLogging turned on By Admin on " + date + "\n\n");
-        writer.flush();
-        writer.close();
+        if (log.exists() == true) {
+            JOptionPane.showMessageDialog(Home.frame, "Logging is alrady on", "Info Message",
+                    JOptionPane.ERROR_MESSAGE);
+        } else if (log.exists() == false) {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(log));
+            writer.write("\t\t\t\t\t------LOG SYSTEM OF HACC------");
+            writer.newLine();
+            writer.newLine();
+            writer.write("\t\t\tLogging turned on By Admin on " + date + "\n\n");
+            writer.flush();
+            writer.close();
+        } else {
+            System.out.println("\n\nERROR Occured");
+        }
+
     }
 
     void backAction() {
