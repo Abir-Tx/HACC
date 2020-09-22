@@ -11,7 +11,7 @@ import javax.swing.JButton;
 import lib.DesignUtils;
 
 public class Functioner extends DesignUtils {
-    public File file = new File("HACC_App//src//Log.dat");
+    public File file = new File("src/Log.dat");
     public java.util.Date date = new java.util.Date();
 
     public void onOffWriter(JButton on, JButton off, String device) {
