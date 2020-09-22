@@ -31,12 +31,13 @@ public class AdminCent extends Functioner {
     JButton addUser = new JButton();
 
     AdminCent() {                                   //Default constructor
-        Home.frame.add(contPanelWindow);
+        
         Home.frame.add(headerpanel);
 
         contPanelWindow.setVisible(true);
         contPanelWindow.setBackground(java.awt.Color.LIGHT_GRAY);
         contPanelWindow.setBounds(0, 200, 1100, 400);
+
 
         logDate.setText("Log time: " + date);
         logDate.setBounds(420, 150, 300, 30);
@@ -81,6 +82,9 @@ public class AdminCent extends Functioner {
         contPanelWindow.add(viewLog);
         contPanelWindow.add(addUser);
 
+        JScrollPane pane = new JScrollPane(contPanelWindow, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        pane.setBounds(0, 200, 1100, 400);
+        Home.frame.add(pane);
     }
 
     private void addUserAction() {
