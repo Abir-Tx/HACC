@@ -5,14 +5,14 @@ import res.utils.Functioner;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -30,14 +30,13 @@ public class AdminCent extends Functioner {
     JButton viewLog = new JButton();
     JButton addUser = new JButton();
 
-    AdminCent() {                                   //Default constructor
-        
+    AdminCent() { // Default constructor
+
         Home.frame.add(headerpanel);
 
         contPanelWindow.setVisible(true);
         contPanelWindow.setBackground(java.awt.Color.LIGHT_GRAY);
         contPanelWindow.setBounds(0, 200, 1100, 400);
-
 
         logDate.setText("Log time: " + date);
         logDate.setBounds(420, 150, 300, 30);
@@ -65,6 +64,7 @@ public class AdminCent extends Functioner {
 
         back.setText("Go Back");
         back.setBounds(15, 300, 120, 50);
+        BtnFontDesigner(back);
 
         // Button Actions adding
         delLogAction();
@@ -82,13 +82,14 @@ public class AdminCent extends Functioner {
         contPanelWindow.add(viewLog);
         contPanelWindow.add(addUser);
 
-        JScrollPane pane = new JScrollPane(contPanelWindow, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        JScrollPane pane = new JScrollPane(contPanelWindow, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
+                JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         pane.setBounds(0, 200, 1100, 400);
         Home.frame.add(pane);
     }
 
     private void addUserAction() {
-        addUser.addActionListener(new ActionListener(){
+        addUser.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -96,8 +97,9 @@ public class AdminCent extends Functioner {
                 String password = JOptionPane.showInputDialog(Home.frame, "Enter the new User password");
 
                 Database.adduser(name, password);
-                System.out.println(name+" has been added to the database");
-                JOptionPane.showMessageDialog(Home.frame, name+" has been added to the Database", "Success", JOptionPane.INFORMATION_MESSAGE);
+                System.out.println(name + " has been added to the database");
+                JOptionPane.showMessageDialog(Home.frame, name + " has been added to the Database", "Success",
+                        JOptionPane.INFORMATION_MESSAGE);
             }
         });
     }
@@ -193,6 +195,34 @@ public class AdminCent extends Functioner {
                 Home.frame.repaint();
             }
 
+        });
+        back.addMouseListener(new MouseListener() {
+
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                back.setBackground(Color.YELLOW);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                back.setBackground(Color.WHITE);
+            }
+            
         });
     }
 
