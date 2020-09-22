@@ -5,6 +5,8 @@ import res.utils.Functioner;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
 import javax.swing.JButton;
 
 import java.awt.Color;
@@ -26,8 +28,9 @@ public class AdminCent extends Functioner {
     JLabel logDate = new JLabel();
     JButton goto_HACC = new JButton();
     JButton viewLog = new JButton();
+    JButton addUser = new JButton();
 
-    AdminCent() {
+    AdminCent() {                                   //Default constructor
         Home.frame.add(contPanelWindow);
         Home.frame.add(headerpanel);
 
@@ -56,15 +59,19 @@ public class AdminCent extends Functioner {
         viewLog.setText("View Log");
         viewLog.setBounds(400, 240, 300, 50);
 
+        addUser.setText("Add User");
+        addUser.setBounds(400, 310, 300, 50);
+
         back.setText("Go Back");
         back.setBounds(15, 300, 120, 50);
 
-        // Button Actions
+        // Button Actions adding
         delLogAction();
         startLoggingAction();
         backAction();
         goto_HACCAction();
         viewLogAction();
+        addUserAction();
 
         // Adding to main content panel
         contPanelWindow.add(delLog);
@@ -72,7 +79,23 @@ public class AdminCent extends Functioner {
         contPanelWindow.add(back);
         contPanelWindow.add(goto_HACC);
         contPanelWindow.add(viewLog);
+        contPanelWindow.add(addUser);
 
+    }
+
+    private void addUserAction() {
+        addUser.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name = JOptionPane.showInputDialog(Home.frame, "Enter the new User name");
+                String password = JOptionPane.showInputDialog(Home.frame, "Enter the new User password");
+
+                Database.adduser(name, password);
+                System.out.println(name+" has been added to the database");
+                JOptionPane.showMessageDialog(Home.frame, name+" has been added to the Database", "Success", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
     }
 
     private void viewLogAction() {
