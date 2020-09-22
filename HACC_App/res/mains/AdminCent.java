@@ -1,19 +1,19 @@
 package res.mains;
+import res.utils.Functioner;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
-import res.utils.Functioner;
+import javax.swing.JButton;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import javax.swing.JButton;
 
 public class AdminCent extends Functioner {
     JLabel headerLabel = new JLabel();
