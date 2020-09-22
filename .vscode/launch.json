@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Settings",
+            "request": "launch",
+            "mainClass": "res.mains.Settings",
+            "projectName": "HACC_21fddddc"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - App",
             "request": "launch",
             "mainClass": "App",

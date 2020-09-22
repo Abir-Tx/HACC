@@ -32,7 +32,9 @@ public class ViewLog extends Functioner {
         ta.setEditable(false);
         ta.setBackground(Color.GRAY);
         ta.setForeground(Color.BLACK);
-        ta.setFont(new Font("Times New Roman",Font.BOLD,14));
+        ta.setFont(new Font("Times New Roman",Font.BOLD,16));
+        ta.setLineWrap(true);
+        ta.setWrapStyleWord(true);
 
         logScroll.setViewportView(ta);
 
@@ -57,7 +59,6 @@ public class ViewLog extends Functioner {
             System.out.println("ERROR: Logging is not on ! No Log file found");
             f.setVisible(false);
             JOptionPane.showMessageDialog(Home.frame, "Logging is off ! Turn on logging first to view it");
-
         }
     }
 }
