@@ -45,7 +45,7 @@ public class Settings extends JFrame {
         mainPanel.setVisible(true);
         mainPanel.setBackground(Color.LIGHT_GRAY);
 
-        totalUser.setText("View Log");
+        totalUser.setText("View Total Users");
         totalUser.setBounds(550, 30, 100, 50);
 
         hideDevices.setText("Hide Light");

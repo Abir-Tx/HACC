@@ -4,6 +4,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -11,6 +13,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
 
 import lib.DesignUtils;
 import res.mains.Home;
@@ -27,6 +31,7 @@ public class Light extends Functioner {
     JButton off = new JButton();
     JRadioButton brightness_50 = new JRadioButton();
     JRadioButton brightness_100 = new JRadioButton();
+    JButton changeColor = new JButton();
 
     public Light() {
         Home.frame.getContentPane().removeAll();
@@ -44,14 +49,30 @@ public class Light extends Functioner {
         onOffWriter(on, off, "Light");
 
         brightnessConfig();
+        changeColorConfig();
 
         bodyPanel.add(back);
         bodyPanel.add(on);
         bodyPanel.add(off);
         bodyPanel.add(brightness_50);
         bodyPanel.add(brightness_100);
+        bodyPanel.add(changeColor);
         headerPanel.add(header);
         Home.frame.repaint();
+    }
+    private void changeColorConfig(){
+        changeColor.setBounds(490, 280, 200, 30);
+        changeColor.setText("Change Color");
+        BtnFontDesigner(changeColor);
+
+        changeColor.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ChnageColor();
+            }
+
+        });
     }
 
     private void brightnessConfig() {

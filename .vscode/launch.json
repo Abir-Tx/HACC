@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ChnageColor",
+            "request": "launch",
+            "mainClass": "res.devices.ChnageColor",
+            "projectName": "HACC_21fddddc"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Settings",
             "request": "launch",
             "mainClass": "res.mains.Settings",
