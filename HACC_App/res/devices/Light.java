@@ -61,7 +61,7 @@ public class Light extends Functioner {
         Home.frame.repaint();
     }
     private void changeColorConfig(){
-        changeColor.setBounds(490, 280, 200, 30);
+        changeColor.setBounds(450, 280, 200, 30);
         changeColor.setText("Change Color");
         BtnFontDesigner(changeColor);
 
