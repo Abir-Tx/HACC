@@ -25,6 +25,28 @@ public class ChnageColor extends DesignUtils {
         buttonFunctioner();
     }
 
+    static boolean isButtonSelected = false;
+    private void buttonFunctioner() {
+        bt1.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                isButtonSelected = true;
+                bt1.setBackground(Color.RED);
+            }
+
+        });
+        bt2.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+              
+            }
+
+        });
+
+    }
+
     private void createFrame() {
                 frame.setSize(new Dimension(400,500));
                 frame.setLocationRelativeTo(Home.frame);
