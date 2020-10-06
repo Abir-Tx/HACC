@@ -1,9 +1,9 @@
 package res.devices;
 
 import javax.swing.BorderFactory;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import java.awt.event.*;
 
@@ -19,6 +19,7 @@ public class ChnageColor extends DesignUtils {
     JFrame frame = new JFrame();
     JPanel panel = new JPanel();
     JButton bt1, bt2, bt3, bt4, bt5, bt6;
+    ButtonGroup buttons = new ButtonGroup();
     public ChnageColor(){
         createFrame();
         createPanel();
@@ -31,7 +32,7 @@ public class ChnageColor extends DesignUtils {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                isButtonSelected = true;
+                // isButtonSelected = true;
                 bt1.setBackground(Color.RED);
             }
 
@@ -40,7 +41,8 @@ public class ChnageColor extends DesignUtils {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-              
+                buttons.clearSelection();
+                bt2.setBackground(Color.YELLOW);
             }
 
         });
@@ -55,6 +57,7 @@ public class ChnageColor extends DesignUtils {
                 frame.setAlwaysOnTop(true);
                 frame.setBackground(Color.BLACK);
                 frame.setLayout(new GridLayout(3,1));
+                frame.setMinimumSize(new Dimension(300, 200));
                 frame.setVisible(true);
     }
     private void createPanel(){
@@ -108,6 +111,13 @@ public class ChnageColor extends DesignUtils {
         panel.add(bt5);
         panel.add(bt6);
         
+
+        buttons.add(bt1);
+        buttons.add(bt2);
+        buttons.add(bt3);
+        buttons.add(bt4);
+        buttons.add(bt5);
+        buttons.add(bt6);
 
         panel.repaint();
         panel.setVisible(true);
