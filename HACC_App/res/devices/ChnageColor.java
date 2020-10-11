@@ -47,6 +47,17 @@ public class ChnageColor extends DesignUtils {
 
         });
 
+        bt3.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                buttons.clearSelection();
+                bt3.setBackground(Color.BLACK);
+                bt3.setForeground(Color.WHITE);
+            }
+
+        });
+
     }
 
     private void createFrame() {
