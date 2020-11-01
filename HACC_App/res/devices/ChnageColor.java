@@ -12,14 +12,14 @@ import lib.DesignUtils;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.*;
-
+import net.java.balloontip.*;
 import res.mains.Home;
 
 public class ChnageColor extends DesignUtils {
     JFrame frame = new JFrame();
     JPanel panel = new JPanel();
     JButton bt1, bt2, bt3, bt4, bt5, bt6;
-    ButtonGroup buttons = new ButtonGroup();
+    ButtonGroup buttons = new ButtonGroup();  //From timmolderez
     public ChnageColor(){
         createFrame();
         createPanel();
@@ -32,8 +32,8 @@ public class ChnageColor extends DesignUtils {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                // isButtonSelected = true;
                 bt1.setBackground(Color.RED);
+                BalloonTip  BalloonTip = new BalloonTip(bt1, "Colour changed to Red");
             }
 
         });
@@ -41,19 +41,19 @@ public class ChnageColor extends DesignUtils {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                buttons.clearSelection();
                 bt2.setBackground(Color.YELLOW);
             }
-
+            BalloonTip  BalloonTip = new BalloonTip(bt1, "Colour changed to Yellow");
         });
 
         bt3.addActionListener(new ActionListener(){
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                buttons.clearSelection();
-                bt3.setBackground(Color.green);
+                bt3.setBackground(Color.BLACK);
+                bt3.setForeground(Color.WHITE);
             }
+            BalloonTip  BalloonTip = new BalloonTip(bt1, "Colour changed to Black");
 
         });
 
@@ -61,9 +61,10 @@ public class ChnageColor extends DesignUtils {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                buttons.clearSelection();
-                bt4.setBackground(Color.PINK);
+                bt4.setBackground(Color.WHITE);
+                bt4.setForeground(Color.BLACK);
             }
+            BalloonTip  BalloonTip = new BalloonTip(bt1, "Colour changed to White");
 
         });
 
@@ -71,7 +72,6 @@ public class ChnageColor extends DesignUtils {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                buttons.clearSelection();
                 bt5.setBackground(Color.BLACK);
                 bt5.setForeground(Color.WHITE);
             }
@@ -95,8 +95,8 @@ public class ChnageColor extends DesignUtils {
         frame.add(panel);
         Dimension dimension = new Dimension(100,50);
 
-        panel.setBackground(Color.BLACK);
-        panel.setBorder(BorderFactory.createLineBorder(Color.RED));
+        // panel.setBackground(Color.BLACK);
+        // panel.setBorder(BorderFactory.createLineBorder(Color.RED));
         panel.setLayout(new GridLayout(3,1));
 
         bt1 = new JButton("Red Colour");
@@ -109,12 +109,12 @@ public class ChnageColor extends DesignUtils {
         bt2.setSize(dimension);
 
         bt3 = new JButton();
-        bt3.setText("Black Button");
+        bt3.setText("Black Colour");
         bt3.setBorder(BorderFactory.createLineBorder(Color.yellow));
         bt3.setSize(dimension);
 
         bt4 = new JButton();
-        bt4.setText("Test Button");
+        bt4.setText("White Colour");
         bt4.setBorder(BorderFactory.createLineBorder(Color.magenta));
         bt4.setSize(dimension);
 
@@ -122,11 +122,15 @@ public class ChnageColor extends DesignUtils {
         bt5.setText("Test2 Button");
         bt5.setBorder(BorderFactory.createLineBorder(Color.green));
         bt5.setSize(dimension);
+        bt5.setVisible(false);
 
         bt6 = new JButton();
         bt6.setText("Test2 Button");
         bt6.setBorder(BorderFactory.createLineBorder(Color.green));
         bt6.setSize(dimension);
+        bt5.setVisible(false);
+        bt6.setVisible(false);
+
 
         BtnFontDesigner(bt1);
         BtnFontDesigner(bt2);
@@ -157,7 +161,7 @@ public class ChnageColor extends DesignUtils {
         frame.repaint();
     }
 
-    public static void main(String[] args) {
+    /* public static void main(String[] args) {
         new ChnageColor();
-    }
+    } */
 }
