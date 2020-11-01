@@ -28,6 +28,7 @@ public class Settings extends JFrame {
         this.setBounds(400, 200, 600, 350);
         this.setAlwaysOnTop(false);
         this.setLayout(null);
+        this.setLocationRelativeTo(Home.frame);
 
         headerPanel.setBounds(0, 0, 600, 100);
         headerPanel.setVisible(true);

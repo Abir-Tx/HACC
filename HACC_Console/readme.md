@@ -12,7 +12,7 @@ _The project is under AIUB. I am doing this project while I am in the second sem
 * This is just a demo program
 
 
-### The Goal Of This Console Project Is:
+## The Goal Of This Console Project Is:
 * Creating and giving an idea of a local network home automation devices control center
 * The usefulness of an all in one control system
 * Designing a beautiful console app using pure java.
