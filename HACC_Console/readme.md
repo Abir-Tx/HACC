@@ -2,7 +2,7 @@
 
 ![HACC Console App Main Screen](https://i.imgur.com/HPYJrda.jpg)
 
-## This is the console version of the main HACC App (GUI). HACC is short form of Home Automation Control Center. This colsole program is just a demo of the main GUI App functionalities.
+This is the console version of the main HACC App (GUI). HACC is short form of Home Automation Control Center. This colsole program is just a demo of the main GUI App functionalities.
 
 _The project is under AIUB. I am doing this project while I am in the second semester._
 
