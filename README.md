@@ -1,4 +1,7 @@
-#                                                            HACC
+# HACC
+![hacc_logo_by_mushfiqur_rahman_abir](https://github.com/Abir-Tx/HACC/assets/28858998/1afacd7a-80b6-408a-b49e-5c7499a327cb)
+
+
 A Basic and Demo interface for home automation control center written in pure java with java swing framework by _Mushfiqur Rahman Abir_. **HACC** stands for **Home Automation Control Center**. I have started this project for my university java course project under MD. Nazmul Hossain. It lacks the actual smart deices connect and functions to control them. The app basically represents what an app center of smart devices can do from just one place instead of using many saperate apps. 
 ***The project has both console & GUI app***
 
